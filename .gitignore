@@ -26,3 +26,12 @@ pnpm-lock.yaml
 pnpm-workspace.yaml
 
 .astro
+# Local mirror captures and publication archives
+steadywins/hts-cache/
+steadywins/accounts.google.com/
+steadywins/ssl.gstatic.com/
+steadywins/cookies.txt
+steadywins/hts-log.txt
+steadywins/*.html
+steadywins/*.gif
+.openai/*.tar.gz

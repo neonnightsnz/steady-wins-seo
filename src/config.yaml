@@ -1,30 +1,30 @@
 site:
-  name: AstroWind
-  site: 'https://astrowind.vercel.app'
+  name: Steady Wins
+  site: 'https://steady-wins-seo.gritty-bream-1893.chatgpt.site'
   base: '/'
   trailingSlash: false
 
-  googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
+  googleSiteVerificationId:
 
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: Steady Wins
+    template: '%s — Steady Wins'
+  description: 'Keywords That Rank. Explore Steady Wins keyword strategy, content, and SEO packages.'
   robots:
-    index: true
+    index: false
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: Steady Wins
     images:
       - url: '~/assets/images/default.png'
         width: 1200
         height: 628
     type: website
   twitter:
-    handle: '@arthelokyo'
-    site: '@arthelokyo'
+    handle: ''
+    site: ''
     cardType: summary_large_image
 
 i18n:
@@ -40,19 +40,19 @@ apps:
       isEnabled: true
       permalink: '/%slug%' # Variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%
       robots:
-        index: true
+        index: false
 
     list:
       isEnabled: true
       pathname: 'blog' # Blog main path, you can change this to "articles" (/articles)
       robots:
-        index: true
+        index: false
 
     category:
       isEnabled: true
       pathname: 'category' # Category main path /category/some-category, you can change this to "group" (/group/some-category)
       robots:
-        index: true
+        index: false
 
     tag:
       isEnabled: true

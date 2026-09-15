@@ -1,0 +1,33 @@
+---
+const items = [
+  ['The right terms', 'Connect your offer to what buyers search for.'],
+  ['The right pages', 'Give each keyword a clear destination.'],
+  ['The right priorities', 'Put your next move in a practical order.'],
+  ['A clear scope', 'Agree deliverables and pricing before work starts.'],
+];
+---
+
+<section class="sw-value sw-section" id="advantage">
+  <div>
+    <p class="sw-eyebrow">03 / The Steady Wins advantage</p><h2>Every move.<br />With a purpose.</h2><p class="sw-lead">
+      Build a Keyword Ranking Engine around your business. Start with the opportunity. Make the next step count.
+    </p><a class="sw-button" href="/contact">Build my growth brief <span aria-hidden="true">↗︎</span></a>
+  </div>
+  <dl class="sw-value-list">
+    {
+      items.map(([title, description], index) => (
+        <div>
+          <>
+            <span aria-hidden="true">0{index + 1}</span>
+            <div>
+              <>
+                <dt>{title}</dt>
+                <dd>{description}</dd>
+              </>
+            </div>
+          </>
+        </div>
+      ))
+    }
+  </dl>
+</section>
