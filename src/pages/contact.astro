@@ -52,7 +52,7 @@ import { packages, enquiryDestination } from '~/data/packages';
             >Include any scope constraints or important business dates.</small
           ></label
         >
-        <button class="sw-button" type="submit">Download my brief <span aria-hidden="true">↓</span></button>
+        <button class="sw-button" type="submit" disabled>Download my brief <span aria-hidden="true">↓</span></button>
         <p id="brief-status" class="sw-status" role="status" aria-live="polite"></p>
       </form>
       {
@@ -108,6 +108,8 @@ import { packages, enquiryDestination } from '~/data/packages';
       const status = document.querySelector('#brief-status');
       if (status) status.textContent = 'Your brief is ready to save. Nothing has been sent to Steady Wins.';
     });
+    // Enable only after the local handler exists: no accidental GET submission without JavaScript.
+    form.querySelector<HTMLButtonElement>('button[type="submit"]')?.removeAttribute('disabled');
   }
   setupBrief();
   document.addEventListener('astro:page-load', setupBrief);
