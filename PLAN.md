@@ -38,7 +38,7 @@
 - Browser review: desktop homepage in light and dark mode; mobile homepage, responsive menu opening and closing on navigation; production blog and all nine catalogue entries; representative package detail page.
 - Brief builder: required fields prevent empty submission; completed sample brief displays the explicit local-download status. No enquiry is transmitted.
 - The download control starts disabled and activates only after its local handler is attached, preventing a fallback GET submission when JavaScript is unavailable. Package detail links preselect the correct interest, including the plus sign in Steady+ SEO.
-- Owner-only Sites preview registered at `https://steady-wins-seo.gritty-bream-1893.chatgpt.site`; canonical origin uses this actual preview URL. Public indexing remains disabled.
+- Owner-only Sites preview registered at `https://steady-wins-seo.isaac-dempsey.chatgpt.site`; canonical origin uses this actual preview URL. Public indexing remains disabled.
 
 ## Launch handover
 
