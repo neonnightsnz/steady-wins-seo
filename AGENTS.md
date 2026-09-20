@@ -10,6 +10,16 @@ AstroWind is a free, open-source website template built with **Astro v7** and **
 
 Before implementing a project-specific task (disabling the blog, Open Graph images, base paths, CMS, deployments, header customisation…), check `.agents/skills/` for an existing skill and follow it.
 
+## Agent skills
+
+### Issue tracker
+
+Issues live as GitHub issues in `neonnightsnz/steady-wins-seo`. See `docs/agents/issue-tracker.md`.
+
+### Domain docs
+
+Single-context: one `CONTEXT.md` at the repo root plus `docs/adr/`. See `docs/agents/domain.md`.
+
 ## Quick Reference
 
 | Command           | Purpose                             |

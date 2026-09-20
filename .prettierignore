@@ -2,5 +2,6 @@ dist
 node_modules
 .github
 .changeset
+.agents/skills
 steadywins
 reference
