@@ -1,0 +1,23 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import { company } from '../data/company';
+import { services } from '../data/services';
+---
+<PageLayout title="Home" description="[Verified description of the business and its primary service]">
+  <section class="hero">
+    <p>[Primary service] in [confirmed service area]</p>
+    <h1>[Clear customer outcome]</h1>
+    <p>[Explain who the business helps and what happens next.]</p>
+    <a class="button" href="/contact/">Request a quote</a>
+  </section>
+  <h2>Services</h2>
+  <section class="cards">
+    {services.map((service) => (
+      <article class="card">
+        <h3>{service.name}</h3>
+        <p>{service.summary}</p>
+        <a href={`/services/${service.slug}/`}>View service</a>
+      </article>
+    ))}
+  </section>
+</PageLayout>

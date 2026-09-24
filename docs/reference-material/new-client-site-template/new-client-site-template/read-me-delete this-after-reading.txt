@@ -1,0 +1,49 @@
+• # 1. Core Objective
+
+  Maintain the West Auckland Storage Astro site, then extract reusable project tooling into new-client-site-template/
+  for future client projects. Next planned work is configuring the enquiry form.
+
+  # 2. Current State
+
+  - Removed “From the yard” from the main navigation only; blog route, footer link, sitemap and content remain.
+  - Moved reusable tooling into new-client-site-template/Reuseable_Website_Template/tooling/.
+  - Verified relocated tooling:
+      - Blog importer: 34 articles and media resolved.
+      - SEO audit: 51 legacy pages vs 74 current pages; zero missing routes.
+
+  - Deleted references/wordpress/, old project-level importer/audit scripts, package commands, and temporary
+    verification fixture.
+
+  - Updated documentation and package configuration.
+  - Validation passed: npm run build, npm run check:site, npm run check.
+  - External recovery archive remains at C:\Users\isaac\Documents\Project Archives\westaucklandstorage-static\2026-09-
+    16-213513.
+
+  - new-client-site-template/ remains untracked and intended for the next project.
+
+  # 3. Key Decisions & Constraints
+
+  - Preserve references/design/ as the approved visual reference; it is not deployed.
+  - Preserve AGENTS.md, README.md, CONTEXT.md, brand guidance, contact-form guidance, roadmap and cleanup documentation.
+  - The reusable tooling lives in new-client-site-template/.../tooling/; importer supports PROJECT_ROOT,
+    WORDPRESS_MIRROR_ROOT, and SITE_DIST_DIR.
+
+  - Build from repository root with npm run build; deploy only dist.
+  - Preserve existing routes, blog content, sitemap behaviour and enquiry behaviour.
+  - Do not commit generated dist/, .astro/ or node_modules/.
+  - The historical WordPress mirror is expendable; the tooling is the valuable reusable asset.
+
+  # 4. Unresolved Issues
+
+  - Enquiry form setup/configuration is not yet completed.
+  - Provider configuration still needs confirming, likely Resend or webhook environment variables.
+  - Temporary/unrelated files remain for later review: New Text Document.txt, tmp-skill-output.txt, and possibly large
+    documentation screenshots.
+
+  - The reusable template folder has not yet been committed or separated into its own project.
+
+  # 5. Immediate Next Steps
+
+  Resume by reading docs/contact-form.md, then inspect the current form markup and functions/api/contact.js; determine
+  the desired delivery provider and configure/test the required Cloudflare environment variables without sending a real
+  enquiry.

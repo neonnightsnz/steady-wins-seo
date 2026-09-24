@@ -1,0 +1,32 @@
+---
+import '../styles/global.css';
+import { company } from '../data/company';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <title>{title} | {company.name}</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <a href="/" class="brand">{company.name}</a>
+      <nav aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/service-areas/">Service areas</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+    </header>
+    <main><slot /></main>
+    <footer class="site-footer">{company.phone} · {company.email}</footer>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "local-service-website-starter",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "check:site": "node --experimental-strip-types scripts/check-site.mjs"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/sitemap": "^3.2.1",
+    "astro": "^7.3.2",
+    "typescript": "^5.9.2"
+  }
+}

@@ -1,0 +1,16 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { services } from '../../data/services';
+
+export function getStaticPaths() {
+  return services.map((service) => ({ params: { slug: service.slug }, props: { service } }));
+}
+
+const { service } = Astro.props;
+---
+<PageLayout title={service.name} description={service.summary}>
+  <h1>{service.name}</h1>
+  <p>{service.summary}</p>
+  <p>[Add verified service detail, process, proof, and next step.]</p>
+  <a class="button" href="/contact/">Request a quote</a>
+</PageLayout>

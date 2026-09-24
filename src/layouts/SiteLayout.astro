@@ -1,0 +1,39 @@
+---
+import '~/assets/styles/site.css';
+import SiteHeader from '~/components/site/SiteHeader.astro';
+import SiteFooter from '~/components/site/SiteFooter.astro';
+import CustomStyles from '~/components/CustomStyles.astro';
+export interface Props {
+  title?: string;
+  description?: string;
+  accent?: string;
+  cardAccent?: string;
+  image?: string;
+}
+const {
+  title = 'Steady Wins',
+  description = 'SEO offers for businesses ready to improve their online presence and drive more qualified traffic.',
+  accent = '#f5f3ef',
+  cardAccent = '#252832',
+  image,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <link rel="icon" href="/favicon.svg" />
+    <title>{title} — Steady Wins</title>
+    {image && <meta property="og:image" content={image} />}
+    <CustomStyles />
+  </head>
+  <body style={`--page-accent:${accent};--page-card-accent:${cardAccent}`}>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <SiteHeader />
+    <main id="main"><slot /></main>
+    <SiteFooter />
+  </body>
+</html>

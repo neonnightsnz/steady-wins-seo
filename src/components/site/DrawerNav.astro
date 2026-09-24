@@ -1,0 +1,91 @@
+---
+import { offers } from '~/data/offers';
+const groups = Array.from({ length: 3 }, (_, index) => offers.slice(index * 3, index * 3 + 3));
+---
+
+<div class="drawer" data-drawer aria-hidden="true">
+  <div class="drawer-backdrop" data-drawer-close></div>
+  <aside class="drawer-panel" aria-label="Offer navigation">
+    <div class="drawer-head">
+      <p>Explore the offers</p><button
+        class="drawer-close"
+        type="button"
+        data-drawer-close
+        aria-label="Close navigation">Close <span aria-hidden="true">×</span></button
+      >
+    </div>
+    <div class="drawer-slider">
+      {
+        groups.map((group, index) => (
+          <div
+            class:list={['drawer-group', { 'is-active': index === 0 }]}
+            data-drawer-group={index}
+            aria-hidden={index === 0 ? 'false' : 'true'}
+          >
+            {group.map((offer, cardIndex) => (
+              <a
+                class="drawer-card"
+                href={`/offers/${offer.slug}`}
+                style={`--card-accent:${offer.cardAccent};--card-image:url('${offer.image}')`}
+              >
+                <span class="drawer-card-image" aria-hidden="true" />
+                <span class="drawer-card-copy">
+                  <small>
+                    {String(index * 3 + cardIndex + 1).padStart(2, '0')} / {offer.category}
+                  </small>
+                  <strong>{offer.title}</strong>
+                  <span>View offer ↗</span>
+                </span>
+              </a>
+            ))}
+          </div>
+        ))
+      }
+    </div>
+    <div class="drawer-controls">
+      <button type="button" data-drawer-prev aria-label="Previous offer group">←</button><span data-drawer-status
+        >01 / 03</span
+      ><button type="button" data-drawer-next aria-label="Next offer group">→</button>
+    </div>
+    <div class="drawer-footer"><a href="/offers">View all offers ↗</a><a href="/contact">Book a call ↗</a></div>
+  </aside>
+</div>
+<script>
+  const drawer = document.querySelector('[data-drawer]');
+  const groups = [...document.querySelectorAll('[data-drawer-group]')];
+  const status = document.querySelector('[data-drawer-status]');
+  let current = 0;
+  const render = () => {
+    groups.forEach((group, index) => {
+      group.setAttribute('aria-hidden', String(index !== current));
+      group.classList.toggle('is-active', index === current);
+    });
+    if (status) status.textContent = `${String(current + 1).padStart(2, '0')} / 03`;
+  };
+  const close = () => {
+    drawer?.classList.remove('is-open');
+    drawer?.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('drawer-open');
+  };
+  document.querySelectorAll('[data-drawer-open]').forEach((button) =>
+    button.addEventListener('click', () => {
+      drawer?.classList.add('is-open');
+      drawer?.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('drawer-open');
+      drawer?.querySelector('button')?.focus();
+    })
+  );
+  document.querySelectorAll('[data-drawer-close]').forEach((button) => button.addEventListener('click', close));
+  document.querySelector('[data-drawer-next]')?.addEventListener('click', () => {
+    current = (current + 1) % groups.length;
+    render();
+  });
+  document.querySelector('[data-drawer-prev]')?.addEventListener('click', () => {
+    current = (current + groups.length - 1) % groups.length;
+    render();
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') close();
+  });
+  render();
+</script>

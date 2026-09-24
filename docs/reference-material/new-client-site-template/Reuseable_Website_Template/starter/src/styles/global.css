@@ -1,0 +1,17 @@
+:root {
+  color: #17202a;
+  background: #f7f8f5;
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+body { margin: 0; }
+.site-header, .site-footer { padding: 1.25rem max(1.25rem, calc((100% - 72rem) / 2)); }
+.site-header { display: flex; justify-content: space-between; gap: 1rem; background: #fff; }
+nav { display: flex; gap: 1rem; }
+a { color: inherit; }
+main { max-width: 72rem; margin: 0 auto; padding: 4rem 1.25rem; }
+.hero { max-width: 48rem; }
+.button { display: inline-block; padding: .75rem 1rem; background: #173f35; color: #fff; text-decoration: none; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem; }
+.card { padding: 1.25rem; background: #fff; border: 1px solid #dfe5df; }

@@ -1,0 +1,19 @@
+---
+import type { Offer } from '~/data/offers';
+interface Props {
+  offer: Offer;
+  index: number;
+}
+const { offer, index } = Astro.props;
+---
+
+<a
+  class="offer-card"
+  href={`/offers/${offer.slug}`}
+  style={`--accent:${offer.accent};--card-accent:${offer.cardAccent}`}
+  ><div class="offer-card-media" style={`background-image:url('${offer.image}')`}>
+    <span>{String(index + 1).padStart(2, '0')}</span>
+  </div><div class="offer-card-copy">
+    <p>{offer.category}</p><h3>{offer.title}</h3><div><span>{offer.price}</span><span>View offer ↗</span></div>
+  </div></a
+>

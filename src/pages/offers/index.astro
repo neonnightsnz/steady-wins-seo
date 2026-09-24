@@ -1,0 +1,21 @@
+---
+import SiteLayout from '~/layouts/SiteLayout.astro';
+import OfferCard from '~/components/site/OfferCard.astro';
+import { offers } from '~/data/offers';
+---
+
+<SiteLayout title="All offers" description="Explore the Steady Wins SEO offer catalogue.">
+  <section class="detail-hero">
+    <div class="page-shell">
+      <p class="eyebrow">Steady Wins / All offers</p><h1>Choose the move<br /><em>that fits.</em></h1><p class="lead">
+        Nine ways to improve your online presence, from keyword strategy and content to links and complete SEO
+        direction.
+      </p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="page-shell">
+      <div class="offer-grid">{offers.map((offer, index) => <OfferCard offer={offer} index={index} />)}</div>
+    </div>
+  </section>
+</SiteLayout>

@@ -1,0 +1,11 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import { company } from '../data/company';
+---
+<PageLayout title="Contact" description="Contact [business name].">
+  <h1>Contact us</h1>
+  <p>Call <a href={`tel:${company.phone}`}>{company.phone}</a> or use the details below.</p>
+  <p>{company.email}</p>
+  <p>{company.address}</p>
+  <p>{company.hours}</p>
+</PageLayout>

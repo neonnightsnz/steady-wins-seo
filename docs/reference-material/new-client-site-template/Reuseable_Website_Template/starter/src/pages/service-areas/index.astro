@@ -1,0 +1,18 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { locations } from '../../data/locations';
+import { locationPages } from '../../data/locationPages';
+---
+<PageLayout title="Service areas" description="Confirmed service areas for [business name].">
+  <h1>Service areas</h1>
+  <p>We serve the areas listed below. Dedicated guides appear only where unique local evidence supports them.</p>
+  <section class="cards">
+    {locations.map((location) => (
+      <article class="card">
+        <h2>{location.name}</h2>
+        <p>{location.note}</p>
+        {location.slug && locationPages.some((page) => page.slug === location.slug) && <a href={`/service-areas/${location.slug}/`}>Read the local guide</a>}
+      </article>
+    ))}
+  </section>
+</PageLayout>

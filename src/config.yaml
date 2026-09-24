@@ -11,9 +11,9 @@ metadata:
   title:
     default: Steady Wins
     template: '%s — Steady Wins'
-  description: 'Keywords That Rank. Explore Steady Wins keyword strategy, content, and SEO packages.'
+  description: 'SEO offers for businesses ready to improve their online presence and drive more qualified traffic.'
   robots:
-    index: false
+    index: true
     follow: true
   openGraph:
     site_name: Steady Wins
@@ -33,32 +33,32 @@ i18n:
 
 apps:
   blog:
-    isEnabled: true
+    isEnabled: false
     postsPerPage: 8
 
     post:
-      isEnabled: true
+      isEnabled: false
       permalink: '/%slug%' # Variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%
       robots:
-        index: false
+        index: true
 
     list:
-      isEnabled: true
+      isEnabled: false
       pathname: 'blog' # Blog main path, you can change this to "articles" (/articles)
       robots:
-        index: false
+        index: true
 
     category:
-      isEnabled: true
+      isEnabled: false
       pathname: 'category' # Category main path /category/some-category, you can change this to "group" (/group/some-category)
       robots:
-        index: false
+        index: true
 
     tag:
-      isEnabled: true
+      isEnabled: false
       pathname: 'tag' # Tag main path /tag/some-tag, you can change this to "topics" (/topics/some-category)
       robots:
-        index: false
+        index: true
 
     isRelatedPostsEnabled: true
     relatedPostsCount: 4
@@ -70,3 +70,4 @@ analytics:
 
 ui:
   theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
+

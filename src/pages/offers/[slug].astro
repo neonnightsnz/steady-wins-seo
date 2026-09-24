@@ -1,0 +1,72 @@
+---
+import SiteLayout from '~/layouts/SiteLayout.astro';
+import { offers } from '~/data/offers';
+export function getStaticPaths() {
+  return offers.map((offer) => ({ params: { slug: offer.slug }, props: { offer } }));
+}
+const { offer } = Astro.props;
+---
+
+<SiteLayout
+  title={offer.title}
+  description={offer.intro}
+  accent={offer.accent}
+  cardAccent={offer.cardAccent}
+  image={offer.image}
+>
+  <section class="detail-hero">
+    <div class="page-shell">
+      <div class="hero-meta"><span>{offer.eyebrow}</span><span>{offer.price}</span></div><h1>{offer.headline}</h1><div
+        class="hero-lower"
+      >
+        <p class="lead">{offer.intro}</p><a class="button" href="/contact"
+          >Order now <span aria-hidden="true">↗</span></a
+        >
+      </div>
+    </div>
+  </section>
+  <section class="detail-grid page-shell">
+    <div class="detail-copy">
+      <section>
+        <p class="eyebrow">01 / The problem</p><h2>Ready to take your online presence to the next level?</h2><p>
+          {offer.problem}
+        </p>
+      </section><section>
+        <p class="eyebrow">02 / The solution</p><h2>{offer.title} offers a solution.</h2><p>{offer.solution}</p><ul
+          class="benefits"
+        >
+          {offer.benefits.map((benefit) => <li>{benefit}</li>)}
+        </ul>
+      </section>{
+        offer.sections.map((section, index) => (
+          <section>
+            <>
+              <p class="eyebrow">
+                {String(index + 3).padStart(2, '0')} / {section.title}
+              </p>
+              <p>{section.body}</p>
+            </>
+          </section>
+        ))
+      }<p class="price">{offer.price}</p><a class="button" href="/contact"
+        >Order now <span aria-hidden="true">↗</span></a
+      >
+    </div><div
+      class="detail-art"
+      style={`background-image:url('${offer.image}')`}
+      role="img"
+      aria-label={offer.imageAlt}
+    >
+    </div>
+  </section>
+  <section class="section">
+    <div class="page-shell">
+      <div class="cta-panel">
+        <div><p class="eyebrow">Next move</p><h2>Don't just take our word for it. Start the conversation.</h2></div><a
+          class="button button-dark"
+          href="/contact">Book a call <span aria-hidden="true">↗</span></a
+        >
+      </div>
+    </div>
+  </section>
+</SiteLayout>

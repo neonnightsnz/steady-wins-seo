@@ -15,8 +15,8 @@
     "astro": "astro",
     "check": "npm run check:astro && npm run check:eslint && npm run check:prettier",
     "check:astro": "astro check",
-    "check:eslint": "eslint .",
-    "check:prettier": "prettier --check .",
+    "check:eslint": "eslint src",
+    "check:prettier": "prettier --check src README.md",
     "fix": "npm run fix:eslint && npm run fix:prettier",
     "fix:eslint": "eslint --fix .",
     "fix:prettier": "prettier -w ."
@@ -78,3 +78,4 @@
     "fast-uri": "^3.1.6"
   }
 }
+

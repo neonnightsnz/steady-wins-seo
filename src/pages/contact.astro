@@ -1,116 +1,34 @@
 ---
-import Layout from '~/layouts/PageLayout.astro';
-import { packages, enquiryDestination } from '~/data/packages';
+import SiteLayout from '~/layouts/SiteLayout.astro';
+import { site } from '~/data/site';
 ---
 
-<Layout
-  metadata={{
-    title: 'Build your growth brief',
-    description: 'Outline your website, package interests, and priorities in a Steady Wins growth brief.',
-  }}
->
-  <div class="sw-shell">
-    <header class="sw-page-intro">
-      <p class="sw-eyebrow">Put your next move on paper</p><h1 class="sw-page-title">Build your growth brief.</h1><p
-        class="sw-lead"
-      >
-        Your website. Your priorities. A clear starting point for your next SEO conversation.
+<SiteLayout title="Book a call" description="Start a conversation with Steady Wins about your next SEO move.">
+  <section class="detail-hero">
+    <div class="page-shell">
+      <p class="eyebrow">Steady Wins / Contact</p><h1>Make your next move<br /><em>count.</em></h1><p class="lead">
+        Choose a time to speak with an expert about your search engine visibility and the offer that fits your business.
       </p>
-    </header>
-    <section class="sw-content pt-0">
-      <h2>Start with the essentials.</h2><p>
-        Download a copy of your brief to keep and share. Your information stays in this page until you download it; this
-        form does not send an enquiry.
+    </div>
+  </section>
+  <section class="contact-layout page-shell">
+    <div>
+      <p class="eyebrow">01 / Book a call</p><h2>Speak with an expert about your next move.</h2><p class="lead">
+        The booking placeholder is ready for a Cal.com URL when you have one. Forms are not the focus of this showcase.
       </p>
-      <form class="sw-form" id="growth-brief">
-        <label>Your name<input name="name" autocomplete="name" required maxlength="120" /></label>
-        <label
-          >Website URL<input
-            type="url"
-            name="website"
-            placeholder="https://yourwebsite.com"
-            required
-            maxlength="500"
-          /></label
-        >
-        <label
-          >Package interest<select name="package" id="package-choice"
-            ><option value="Not sure yet">Find my starting point</option>{
-              packages.map((item) => <option value={item.name}>{item.name}</option>)
-            }</select
-          ></label
-        >
-        <label
-          >Your growth priority<textarea
-            name="priority"
-            placeholder="What do you sell, who do you serve, and what do you want to improve?"
-            required
-            maxlength="3000"></textarea></label
-        >
-        <label
-          >Budget or timing (optional)<input name="budget" maxlength="300" /><small
-            >Include any scope constraints or important business dates.</small
-          ></label
-        >
-        <button class="sw-button" type="submit" disabled>Download my brief <span aria-hidden="true">↓</span></button>
-        <p id="brief-status" class="sw-status" role="status" aria-live="polite"></p>
-      </form>
+    </div><div class="booking-box">
       {
-        enquiryDestination && (
-          <a class="sw-button" href={enquiryDestination}>
-            Start the conversation ↗︎
-          </a>
+        site.bookingUrl ? (
+          <iframe title="Book a call" src={site.bookingUrl} width="100%" height="480" loading="lazy" />
+        ) : (
+          <div>
+            <>
+              <p>Booking will appear here once the Cal.com URL is configured.</p>
+              <code>bookingUrl: ''</code>
+            </>
+          </div>
         )
       }
-      <noscript
-        ><p>
-          Downloading a brief requires JavaScript. You can copy the questions above into a document instead.
-        </p></noscript
-      >
-    </section>
-  </div>
-</Layout>
-<script>
-  function setupBrief() {
-    const form = document.querySelector<HTMLFormElement>('#growth-brief');
-    if (!form || form.dataset.ready) return;
-    form.dataset.ready = 'true';
-    const select = form.querySelector<HTMLSelectElement>('#package-choice');
-    const requested = new URLSearchParams(window.location.search).get('package');
-    if (select && requested && Array.from(select.options).some((option) => option.value === requested))
-      select.value = requested;
-    form.addEventListener('submit', (event) => {
-      event.preventDefault();
-      if (!form.reportValidity()) return;
-      const data = new FormData(form);
-      const content = [
-        'STEADY WINS — GROWTH BRIEF',
-        '',
-        'Name: ' + data.get('name'),
-        'Website: ' + data.get('website'),
-        'Package: ' + data.get('package'),
-        '',
-        'Priority:',
-        String(data.get('priority')),
-        '',
-        'Budget or timing: ' + (data.get('budget') || 'Not specified'),
-        '',
-        'Prepared locally. This brief has not been sent to Steady Wins.',
-      ].join('\n');
-      const url = URL.createObjectURL(new Blob([content], { type: 'text/plain;charset=utf-8' }));
-      const link = document.createElement('a');
-      link.href = url;
-      link.download = 'steady-wins-growth-brief.txt';
-      document.body.append(link);
-      link.click();
-      link.remove();
-      setTimeout(() => URL.revokeObjectURL(url), 1000);
-      const status = document.querySelector('#brief-status');
-      if (status) status.textContent = 'Your brief is ready to save. Nothing has been sent to Steady Wins.';
-    });
-    // Enable only after the local handler exists: no accidental GET submission without JavaScript.
-    form.querySelector<HTMLButtonElement>('button[type="submit"]')?.removeAttribute('disabled');
-  }
-  setupBrief();
-  document.addEventListener('astro:page-load', setupBrief);
-</script>
+    </div>
+  </section>
+</SiteLayout>

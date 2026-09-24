@@ -1,137 +1,71 @@
 ---
-import Layout from '~/layouts/PageLayout.astro';
-import Features from '~/components/widgets/Features.astro';
-import Steps2 from '~/components/widgets/Steps2.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
-import PackageGrid from '~/components/widgets/PackageGrid.astro';
-import ValueStack from '~/components/widgets/ValueStack.astro';
-import StructuredData from '~/components/common/StructuredData.astro';
-import { SITE, I18N } from 'astrowind:config';
-const metadata = {
-  title: 'Steady Wins — Keywords That Rank',
-  ignoreTitleTemplate: true,
-  description:
-    'Target the terms. Build your search momentum. Explore the Steady Wins Keyword Ranking Engine and find your next move.',
-};
-const schema = [
-  {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    name: SITE.name,
-    url: SITE.site,
-    inLanguage: I18N.language,
-    publisher: { '@id': SITE.site + '/#organization' },
-  },
-  {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    '@id': SITE.site + '/#organization',
-    name: SITE.name,
-    url: SITE.site,
-  },
-];
+import SiteLayout from '~/layouts/SiteLayout.astro';
+import OfferCard from '~/components/site/OfferCard.astro';
+import { offers } from '~/data/offers';
 ---
 
-<Layout metadata={metadata}>
-  <StructuredData slot="head" schema={schema} />
-  <section class="sw-hero" id="start">
-    <div class="sw-shell">
-      <div class="sw-hero-top">
-        <p class="sw-eyebrow">Steady Wins / Keywords That Rank</p><span class="sw-eyebrow">Search with purpose. ↗︎</span>
-      </div>
-      <h1>Target the terms.<br /><em>Own your next move.</em></h1>
-      <div class="sw-hero-lower">
-        <div>
-          <p>Build your Keyword Ranking Engine around the searches that matter to your business.</p><a
-            class="sw-button"
-            href="#packages">Explore the packages <span aria-hidden="true">↗︎</span></a
-          >
-        </div>
-        <div class="sw-engine">
-          <span class="sw-engine-label">Your search strategy, in motion</span><ol>
-            <li><span>01</span> Find your buyer's search.</li><li><span>02</span> Give it the right destination.</li><li
-            >
-              <span>03</span> Build your next move around it.
-            </li>
-          </ol>
-        </div>
-      </div>
-    </div>
-    <div class="sw-ticker">
-      <span>Keyword strategy ↗︎</span><span>Purposeful content ↗︎</span><span>Authority building ↗︎</span><span
-        >Steady momentum ↗︎</span
+<SiteLayout
+  title="SEO that keeps moving"
+  description="Steady Wins SEO offers for businesses ready to improve their online presence."
+>
+  <section class="hero">
+    <div class="page-shell">
+      <div class="hero-meta"><span>Steady Wins / SEO offers</span><span>Keywords. Content. Links.</span></div><h1
+        class="display"
       >
+        Make your search<br /><em>move steady.</em>
+      </h1><div class="hero-lower">
+        <p class="lead">
+          Welcome to Steady Wins SEO, the premier provider of search engine optimization services for businesses looking
+          to increase their online presence and attract more qualified leads.
+        </p><a class="button" href="/offers">Explore the offers <span aria-hidden="true">↗</span></a>
+      </div><div
+        class="hero-art"
+        style={`background-image:url('${offers[4].image}')`}
+        role="img"
+        aria-label={offers[4].imageAlt}
+      >
+      </div>
     </div>
   </section>
-  <Features
-    id="problem"
-    tagline="01 / Make visibility count"
-    title="Stop letting good searches go nowhere."
-    columns={3}
-    items={[
-      { title: 'Invisible pages', description: 'Your offer stays out of sight.', icon: 'tabler:eye-off' },
-      {
-        title: 'Wrong-fit traffic',
-        description: 'Visits without a clear buying intention.',
-        icon: 'tabler:alert-triangle',
-      },
-      { title: 'Scattered effort', description: 'Busy campaigns. Unclear next steps.', icon: 'tabler:arrows-split' },
-    ]}
-  />
-  <div class="sw-shell">
-    <section class="sw-section" id="packages">
-      <p class="sw-eyebrow">02 / Choose your next move</p><div class="sw-section-heading">
-        <h2>Your ambition.<br />Your engine.</h2><p>
-          Start with a core package. Explore focused options for keywords, content, and links.
-        </p>
-      </div><PackageGrid compact /><div class="mt-8">
-        <a class="sw-text-link" href="/services">Explore all 9 packages ↗︎</a>
-      </div>
-    </section><ValueStack />
-  </div>
-  <Steps2
-    id="process"
-    tagline="04 / From intent to action"
-    title="Target. Plan. Move."
-    items={[
-      { title: 'Tell us where you stand.', description: 'Share your website, offer, and growth priorities.' },
-      { title: 'Choose the right direction.', description: 'Discuss the package that fits your next move.' },
-      { title: 'Define the work.', description: 'Agree scope, pricing, and expectations before your campaign starts.' },
-    ]}
-  />
-  <FAQs
-    id="questions"
-    tagline="05 / Straight answers"
-    title="Know your next move."
-    items={[
-      {
-        title: 'Which package should I start with?',
-        description:
-          'Start with your biggest priority: keyword direction, existing pages, new content, or links. The package catalogue explains each focus so you can build a useful brief.',
-      },
-      {
-        title: 'Where can I see pricing?',
-        description:
-          'Pricing depends on the agreed scope. Explore the pricing page for the information to include when discussing a package.',
-      },
-      {
-        title: 'Does a package guarantee rankings?',
-        description:
-          'No ranking position or revenue outcome is promised on this site. Scope and expectations need to be agreed before work begins.',
-      },
-      {
-        title: 'Can I combine packages?',
-        description:
-          'Include your preferred packages in your growth brief. A combined scope should reflect your priorities and avoid overlapping work.',
-      },
-    ]}
-  />
-  <div class="sw-shell">
-    <section class="sw-close" id="next">
-      <div><p class="sw-eyebrow">Make the next move count.</p><h2>Put your search<br />ambition to work.</h2></div><a
-        class="sw-button"
-        href="/contact">Build my growth brief ↗︎</a
+  <div class="page-shell">
+    <div class="ticker">
+      <span>Search visibility ↗</span><span>Relevant content ↗</span><span>Steady momentum ↗</span><span
+        >Qualified leads ↗</span
       >
-    </section>
+    </div>
   </div>
-</Layout>
+  <section class="section">
+    <div class="page-shell">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">01 / Find your next move</p><h2>Nine ways to put your search ambition to work.</h2>
+        </div><p>
+          Explore the Steady Wins catalogue of SEO services. Choose the direction that fits where your business is right
+          now.
+        </p>
+      </div><div class="offer-grid">{offers.map((offer, index) => <OfferCard offer={offer} index={index} />)}</div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="page-shell split">
+      <div>
+        <p class="eyebrow">02 / Search with purpose</p><h2>Visibility is only useful when it leads somewhere.</h2>
+      </div><ol class="numbered-list">
+        <li><span>01</span><strong>Identify the searches that matter to your business.</strong></li><li>
+          <span>02</span><strong>Give those searches the right destination.</strong>
+        </li><li><span>03</span><strong>Build your next move around them.</strong></li>
+      </ol>
+    </div>
+  </section>
+  <section class="section">
+    <div class="page-shell">
+      <div class="cta-panel">
+        <div><p class="eyebrow">03 / Start the conversation</p><h2>Ready to make the next move count?</h2></div><a
+          class="button button-dark"
+          href="/contact">Book a call <span aria-hidden="true">↗</span></a
+        >
+      </div>
+    </div>
+  </section>
+</SiteLayout>
