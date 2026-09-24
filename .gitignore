@@ -35,3 +35,29 @@ steadywins/hts-log.txt
 steadywins/*.html
 steadywins/*.gif
 .openai/*.tar.gz
+
+# ==============================================================================
+# Custom Workspace Management & Architecture Layer
+# ==============================================================================
+
+# --- System & Deployment Performance Overrides ---
+# Exclude heavy prototype structures and retired hosting environments from cloud fetches
+docs/archive/
+
+# --- Dynamic Asset De-duplication ---
+# Filter raw binary files that have already been integrated into /public or /src/assets
+docs/reference-material/**/*.psd
+docs/reference-material/**/*.ai
+docs/reference-material/**/*.raw
+
+# --- AI Agent Workspace & Automated Context Control ---
+# Eliminate workspace noise and infinite tracking loops caused by automated code loops
+docs/ai-context/*_scratchpad*
+docs/ai-context/*log*
+.cursorrules_cache/
+.cline/
+.devin/
+agent_workspace/
+
+# Top-level local AI workspace (project skills already tracked remain tracked)
+.agents/
