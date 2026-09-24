@@ -1,32 +1,39 @@
-# build output
+# Dependencies & build output
+node_modules/
 dist/
+.astro/
 .output/
 
-# dependencies
-node_modules/
-
-# logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-
-
-# environment variables
+# Secrets & local config
 .env
-.env.production
+.env.*
+!.env.example
+.dev.vars
+.wrangler/
 
-# macOS-specific files
+# OS / editor noise
 .DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
 
-# pnpm-specific files: pnpm is supported for local use (see .pnpmrc), but
-# package-lock.json is the tracked lockfile and npm is what CI, Docker and
-# the deploy targets run. Committing these would let the two trees diverge.
+# AI agent scratch (rules/ in .agents/ is committed)
+.agents/scratchpads/
+.agents/logs/
+.cursorrules_cache/
+.cline/
+.devin/
+agent_workspace/
+
+# Historical material excluded from Cloudflare fetches
+docs/archive/
+docs/reference-material/**/*.psd
+docs/reference-material/**/*.ai
+docs/reference-material/**/*.raw
+
+# Package-manager and legacy mirror noise
 pnpm-lock.yaml
 pnpm-workspace.yaml
-
-.astro
-# Local mirror captures and publication archives
 steadywins/hts-cache/
 steadywins/accounts.google.com/
 steadywins/ssl.gstatic.com/
@@ -35,29 +42,3 @@ steadywins/hts-log.txt
 steadywins/*.html
 steadywins/*.gif
 .openai/*.tar.gz
-
-# ==============================================================================
-# Custom Workspace Management & Architecture Layer
-# ==============================================================================
-
-# --- System & Deployment Performance Overrides ---
-# Exclude heavy prototype structures and retired hosting environments from cloud fetches
-docs/archive/
-
-# --- Dynamic Asset De-duplication ---
-# Filter raw binary files that have already been integrated into /public or /src/assets
-docs/reference-material/**/*.psd
-docs/reference-material/**/*.ai
-docs/reference-material/**/*.raw
-
-# --- AI Agent Workspace & Automated Context Control ---
-# Eliminate workspace noise and infinite tracking loops caused by automated code loops
-docs/ai-context/*_scratchpad*
-docs/ai-context/*log*
-.cursorrules_cache/
-.cline/
-.devin/
-agent_workspace/
-
-# Top-level local AI workspace (project skills already tracked remain tracked)
-.agents/

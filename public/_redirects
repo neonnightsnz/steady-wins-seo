@@ -1,0 +1,2 @@
+# Example: send www to apex (adjust per client)
+# https://www.example.com/* https://example.com/:splat 301
