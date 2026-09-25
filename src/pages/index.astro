@@ -5,6 +5,7 @@ import Steps2 from '~/components/widgets/Steps2.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import PackageGrid from '~/components/widgets/PackageGrid.astro';
 import ValueStack from '~/components/widgets/ValueStack.astro';
+import GrowthBriefForm from '~/components/widgets/GrowthBriefForm.astro';
 import StructuredData from '~/components/common/StructuredData.astro';
 import { SITE, I18N } from 'astrowind:config';
 const metadata = {
@@ -48,10 +49,12 @@ const schema = [
       <h1>Target the terms.<br />Own your <span class="sw-kw">next move</span>.</h1>
       <div class="sw-hero-lower">
         <div>
-          <p>Build your Keyword Ranking Engine around the searches that matter to your business.</p><a
-            class="sw-button"
-            href="#packages">Explore the packages <span aria-hidden="true">↗︎</span></a
-          >
+          <p>Build your Keyword Ranking Engine around the searches that matter to your business.</p>
+          <div class="sw-hero-form">
+            <p class="sw-eyebrow sw-eyebrow--form">Start with a brief</p>
+            <GrowthBriefForm showHeading={false} id="hero-growth-brief" />
+          </div>
+          <a class="sw-button sw-hero-cta" href="#packages">Explore the packages <span aria-hidden="true">↗︎</span></a>
         </div>
         <div class="sw-engine">
           <span class="sw-engine-label"><span class="sw-status-dot"></span> Your search strategy, in motion</span><ol>
@@ -63,81 +66,5 @@ const schema = [
         </div>
       </div>
     </div>
-    <div class="sw-ticker">
-      <span>Keyword strategy ↗︎</span><span>Purposeful content ↗︎</span><span>Authority building ↗︎</span><span
-        >Steady momentum ↗︎</span
-      >
-    </div>
-  </section>
-  <Features
-    id="problem"
-    tagline="01 / Make visibility count"
-    title="Stop letting good searches go nowhere."
-    columns={3}
-    items={[
-      { title: 'Invisible pages', description: 'Your offer stays out of sight.', icon: 'tabler:eye-off' },
-      {
-        title: 'Wrong-fit traffic',
-        description: 'Visits without a clear buying intention.',
-        icon: 'tabler:alert-triangle',
-      },
-      { title: 'Scattered effort', description: 'Busy campaigns. Unclear next steps.', icon: 'tabler:arrows-split' },
-    ]}
-  />
-  <div class="sw-shell">
-    <section class="sw-section" id="packages">
-      <p class="sw-eyebrow">02 / Choose your next move</p><div class="sw-section-heading">
-        <h2>Your ambition.<br />Your engine.</h2><p>
-          Start with a core package. Explore focused options for keywords, content, and links.
-        </p>
-      </div><PackageGrid compact /><div class="mt-8">
-        <a class="sw-text-link" href="/services">Explore all 9 packages ↗︎</a>
-      </div>
-    </section><ValueStack />
-  </div>
-  <Steps2
-    id="process"
-    tagline="04 / From intent to action"
-    title="Target. Plan. Move."
-    items={[
-      { title: 'Tell us where you stand.', description: 'Share your website, offer, and growth priorities.' },
-      { title: 'Choose the right direction.', description: 'Discuss the package that fits your next move.' },
-      { title: 'Define the work.', description: 'Agree scope, pricing, and expectations before your campaign starts.' },
-    ]}
-  />
-  <FAQs
-    id="questions"
-    tagline="05 / Straight answers"
-    title="Know your next move."
-    items={[
-      {
-        title: 'Which package should I start with?',
-        description:
-          'Start with your biggest priority: keyword direction, existing pages, new content, or links. The package catalogue explains each focus so you can build a useful brief.',
-      },
-      {
-        title: 'Where can I see pricing?',
-        description:
-          'Pricing depends on the agreed scope. Explore the pricing page for the information to include when discussing a package.',
-      },
-      {
-        title: 'Does a package guarantee rankings?',
-        description:
-          'No ranking position or revenue outcome is promised on this site. Scope and expectations need to be agreed before work begins.',
-      },
-      {
-        title: 'Can I combine packages?',
-        description:
-          'Include your preferred packages in your growth brief. A combined scope should reflect your priorities and avoid overlapping work.',
-      },
-    ]}
-  />
-  <div class="sw-shell">
-    <section class="sw-close" id="next">
-      <div><p class="sw-eyebrow">Make the next move count.</p><h2>Put your search<br />ambition to work.</h2></div><a
-        class="sw-button"
-        href="/contact">Build my growth brief ↗︎</a
-      >
-    </section>
-  </div>
-</Layout>
+  </section></Layout
+>

@@ -1,10 +1,16 @@
 ---
-import { SITE } from 'astrowind:config';
+
 ---
 
-<span class="inline-flex items-center gap-2 whitespace-nowrap text-heading font-extrabold tracking-tighter text-2xl"
-  ><span
-    class="inline-flex h-9 w-9 items-center justify-center rounded-sm bg-[#f6e547] text-[#15201a]"
-    aria-hidden="true">↗︎</span
-  >{SITE.name}<span class="text-primary">.</span></span
+<span
+  class="inline-flex h-10 items-center rounded-lg bg-white pl-1.5 pr-2.5 shadow-sm ring-1 ring-black/10 dark:ring-white/10"
+  aria-hidden="false"
 >
+  <img
+    src="/images/logo.png"
+    alt="Steady Wins logo"
+    class="h-7 w-auto object-contain"
+    loading="eager"
+    fetchpriority="high"
+  />
+</span>

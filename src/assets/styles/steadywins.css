@@ -919,4 +919,47 @@
     background: rgba(255, 255, 255, 0.045);
     box-shadow: 0 0 26px -8px rgba(192, 255, 0, 0.3);
   }
+
+  /* Hero growth-brief form panel */
+  .sw-hero-form {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 18px;
+    padding: 24px 24px 26px;
+    margin-bottom: 26px;
+    max-width: 480px;
+  }
+  .sw-hero-form .sw-eyebrow {
+    color: var(--sw-glow);
+    margin-bottom: 18px;
+  }
+  .sw-hero-form .sw-form {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 16px;
+  }
+  .sw-hero-form .sw-form label {
+    color: #d1d5db;
+  }
+  .sw-hero-form .sw-form input,
+  .sw-hero-form .sw-form select,
+  .sw-hero-form .sw-form textarea {
+    background: rgba(10, 10, 12, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    color: #f5f5f7;
+  }
+  .sw-hero-form .sw-form input:focus,
+  .sw-hero-form .sw-form select:focus,
+  .sw-hero-form .sw-form textarea:focus {
+    border-color: rgba(192, 255, 0, 0.55);
+  }
+  .sw-hero-form .sw-form small {
+    color: #9ca3af;
+  }
+  .sw-hero-cta {
+    margin-bottom: 28px;
+  }
 }
