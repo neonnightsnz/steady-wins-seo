@@ -48,6 +48,10 @@
     background: #fff174;
     transform: translateY(-2px);
   }
+  .sw-button:active {
+    transform: scale(0.97);
+    transition-duration: 140ms;
+  }
   a:focus-visible,
   button:focus-visible,
   summary:focus-visible,
@@ -62,6 +66,34 @@
     color: #f8faf5;
     padding-top: 64px;
     overflow: hidden;
+  }
+  .sw-mobile-nav {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    transform: translateX(100%);
+    transition:
+      opacity 240ms ease-out,
+      transform 240ms ease-out,
+      max-height 240ms ease-out;
+  }
+  .sw-mobile-nav.is-open {
+    max-height: calc(100vh - 5rem);
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0);
+  }
+  .sw-faq-answer {
+    opacity: 0;
+    transform: translateY(-4px);
+    transition:
+      opacity 200ms ease-out,
+      transform 200ms ease-out;
+  }
+  details[open] .sw-faq-answer {
+    opacity: 1;
+    transform: translateY(0);
   }
   .sw-hero-top {
     display: flex;
@@ -169,10 +201,16 @@
     transition:
       transform 0.2s,
       box-shadow 0.2s;
+    animation: sw-package-enter 240ms ease-out both;
+    animation-delay: calc(var(--package-index, 0) * 40ms);
   }
   .sw-package:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 24px #0002;
+  }
+  .sw-package:active {
+    transform: translateY(-2px) scale(0.99);
+    transition-duration: 140ms;
   }
   .sw-package-top {
     display: flex;
@@ -346,6 +384,24 @@
   .sw-skip:focus {
     top: 10px;
   }
+  @keyframes sw-package-enter {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes sw-package-enter-reduced {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
   #header .btn-primary {
     background: #f6e547;
     color: #15201a;
@@ -396,6 +452,36 @@
   @media (prefers-reduced-motion: reduce) {
     .sw-button,
     .sw-package {
+      transition-duration: 100ms;
+    }
+    .sw-button:active,
+    .sw-package:active {
+      transform: none;
+    }
+    .sw-mobile-nav {
+      transform: none;
+      transition: opacity 120ms ease-out;
+    }
+    .sw-mobile-nav.is-open {
+      transform: none;
+    }
+    .sw-faq-answer {
+      transform: none;
+      transition: opacity 100ms ease-out;
+    }
+    .sw-package {
+      animation-name: sw-package-enter-reduced;
+      animation-duration: 100ms;
+      animation-delay: 0ms;
+    }
+  }
+  @media (min-width: 1024px) {
+    .sw-mobile-nav {
+      max-height: none;
+      opacity: 1;
+      overflow: visible;
+      pointer-events: auto;
+      transform: none;
       transition: none;
     }
   }

@@ -96,7 +96,7 @@ const persistKey = `header-${Array.from(
         </div>
       </div>
       <nav
-        class="items-center w-full lg:w-auto hidden lg:flex lg:mx-5 text-default overflow-y-auto overflow-x-hidden lg:overflow-visible lg:justify-self-center"
+        class="sw-mobile-nav items-center w-full lg:w-auto lg:flex lg:mx-5 text-default overflow-y-auto overflow-x-hidden lg:overflow-visible lg:justify-self-center"
         aria-label="Main navigation"
       >
         <ul
@@ -232,7 +232,7 @@ const persistKey = `header-${Array.from(
         header?.classList.toggle('h-screen');
         header?.classList.toggle('expanded');
         header?.classList.toggle('bg-page');
-        nav?.classList.toggle('hidden');
+        nav?.classList.toggle('is-open', expanded);
         lastChild?.classList.toggle('hidden');
       });
 

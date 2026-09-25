@@ -11,7 +11,11 @@ const items = compact ? packages.slice(0, 3) : packages;
 <div class="sw-package-grid">
   {
     items.map((item, index) => (
-      <a class="sw-package" href={`/packages/${item.slug}`} style={`--package-accent:${item.color}`}>
+      <a
+        class="sw-package"
+        href={`/packages/${item.slug}`}
+        style={`--package-accent:${item.color};--package-index:${index}`}
+      >
         <div class="sw-package-top">
           <>
             <span>{item.category}</span>
