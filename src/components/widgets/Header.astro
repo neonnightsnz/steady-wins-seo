@@ -220,7 +220,7 @@ const persistKey = `header-${Array.from(
         toggle?.setAttribute('aria-expanded', 'false');
         document.body.classList.remove('overflow-hidden');
         header?.classList.remove('h-screen', 'expanded', 'bg-page');
-        nav?.classList.add('hidden');
+        nav?.classList.remove('is-open');
         lastChild?.classList.add('hidden');
       };
 
