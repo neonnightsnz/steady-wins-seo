@@ -22,6 +22,9 @@ const items = compact ? packages.slice(0, 3) : packages;
             <span>{String(index + 1).padStart(2, '0')}</span>
           </>
         </div>
+        <div class="sw-package-image-wrap">
+          <img class="sw-package-image" src={item.image} alt={item.imageAlt} loading="lazy" />
+        </div>
         <Icon name={item.icon} class="sw-package-icon" />
         <h3>{item.name}</h3>
         <p>{item.line}</p>

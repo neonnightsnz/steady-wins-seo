@@ -5,6 +5,8 @@ export const packages = [
     line: 'Build your search momentum.',
     category: 'Core SEO',
     color: '#bfcbd7',
+    image: '/images/offers/steady-wins-20-days-seo-boost-push-the-button.jpg',
+    imageAlt: 'Steady Wins 20 Days SEO Boost — Push the Button',
     icon: 'tabler:arrow-up-right',
     description:
       'A focused starting point for your Keyword Ranking Engine. Identify the pages and search terms that deserve attention first.',
@@ -16,6 +18,8 @@ export const packages = [
     line: 'The perfect storm.',
     category: 'Core SEO',
     color: '#f2cd63',
+    image: '/images/offers/steady-wins-seo-perfect-storm-hit-the-button.jpg',
+    imageAlt: 'Steady Wins SEO Perfect Storm — Hit the Button',
     icon: 'tabler:bolt',
     description:
       'Bring your keyword, content, and authority priorities into one conversation. Build a coordinated direction for a more competitive search presence.',
@@ -27,6 +31,8 @@ export const packages = [
     line: 'Keep your authority moving.',
     category: 'Links',
     color: '#86b9ff',
+    image: '/images/offers/steady-on-new-links-all-month-flip-the-switch.jpg',
+    imageAlt: 'Steady On New Links All Month — Flip the Switch',
     icon: 'tabler:link',
     description:
       'Explore ongoing link activity around the pages that matter to your business. Agree on placement criteria and scope before work begins.',
@@ -38,6 +44,8 @@ export const packages = [
     line: 'Find the terms worth targeting.',
     category: 'Strategy',
     color: '#ffac62',
+    image: '/images/offers/links-all-month.jpg',
+    imageAlt: 'Links All Month',
     icon: 'tabler:target',
     description:
       'Start with what your buyers search for. Connect relevant search terms to your offer and give each priority a clear destination.',
@@ -49,6 +57,8 @@ export const packages = [
     line: 'Put your expertise in the ring.',
     category: 'Links',
     color: '#ff8995',
+    image: '/images/offers/straight-up-hard-hitting-guest-posts-that-push-the-needle.jpg',
+    imageAlt: 'Straight Up Hard Hitting Guest Posts That Push the Needle',
     icon: 'tabler:writing',
     description:
       'Explore guest content opportunities that connect your expertise with a relevant audience. Discuss editorial fit, target pages, and placement requirements.',
@@ -60,6 +70,8 @@ export const packages = [
     line: 'Know the approach. Ask the questions.',
     category: 'Links',
     color: '#fa906a',
+    image: '/images/offers/the-pbn-network-whip-well-make-it-work.jpg',
+    imageAlt: 'The PNB Network Whip — We\'ll Make It Work',
     icon: 'tabler:network',
     description:
       'A specialist link option from the Steady Wins catalogue. Discuss the network approach, placement controls, and search-policy implications before choosing a scope.',
@@ -71,6 +83,8 @@ export const packages = [
     line: 'Find your next practical move.',
     category: 'Strategy',
     color: '#fbda57',
+    image: '/images/offers/steady-wins-easy-seo-quick-wins-hit-the-button.jpg',
+    imageAlt: 'Steady Wins Easy SEO Quick Wins — Hit the Button',
     icon: 'tabler:arrow-up-right',
     description:
       'Focus the conversation on existing pages and practical improvements. Set priorities around your site’s current position and available resources.',
@@ -82,6 +96,8 @@ export const packages = [
     line: 'Give every page a purpose.',
     category: 'Content',
     color: '#8ddcb0',
+    image: '/images/offers/green-light-content-that-ranks-hit-green-to-go-up.jpg',
+    imageAlt: 'Green Light Content That Ranks — Hit Green to Go Up',
     icon: 'tabler:file-text',
     description:
       'Connect content ideas to your offer and the questions buyers ask. Define the purpose, audience, and next action for each page before writing.',
@@ -93,6 +109,8 @@ export const packages = [
     line: 'Give your campaign another gear.',
     category: 'Add-on',
     color: '#c4afff',
+    image: '/images/offers/steady-wins-nitrous-seo-addon-hit-the-nos.jpg',
+    imageAlt: 'Steady Wins Nitrous SEO Addon — Hit the NOS',
     icon: 'tabler:adjustments',
     description:
       'Discuss additional work alongside your core campaign. Choose a specific priority and agree how it fits the existing plan.',
