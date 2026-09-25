@@ -35,11 +35,17 @@ const schema = [
 <Layout metadata={metadata}>
   <StructuredData slot="head" schema={schema} />
   <section class="sw-hero" id="start">
-    <div class="sw-shell">
+    <div class="sw-glow-canvas" aria-hidden="true">
+      <div class="sw-glow-spot sw-glow-spot--md" style="top:-160px;left:-100px;"></div>
+      <div class="sw-glow-spot sw-glow-spot--md sw-glow-spot--accent" style="top:120px;right:-160px;"></div>
+    </div>
+    <div class="sw-shell" style="position:relative;z-index:1;">
       <div class="sw-hero-top">
-        <p class="sw-eyebrow">Steady Wins / Keywords That Rank</p><span class="sw-eyebrow">Search with purpose. ↗︎</span>
+        <span class="sw-status-pill"><span class="sw-status-dot"></span> Keywords That Rank</span><span
+          class="sw-eyebrow">Search with purpose. ↗︎</span
+        >
       </div>
-      <h1>Target the terms.<br /><em>Own your next move.</em></h1>
+      <h1>Target the terms.<br />Own your <span class="sw-kw">next move</span>.</h1>
       <div class="sw-hero-lower">
         <div>
           <p>Build your Keyword Ranking Engine around the searches that matter to your business.</p><a
@@ -48,7 +54,7 @@ const schema = [
           >
         </div>
         <div class="sw-engine">
-          <span class="sw-engine-label">Your search strategy, in motion</span><ol>
+          <span class="sw-engine-label"><span class="sw-status-dot"></span> Your search strategy, in motion</span><ol>
             <li><span>01</span> Find your buyer's search.</li><li><span>02</span> Give it the right destination.</li><li
             >
               <span>03</span> Build your next move around it.

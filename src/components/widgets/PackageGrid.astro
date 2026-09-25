@@ -14,11 +14,12 @@ const items = compact ? packages.slice(0, 3) : packages;
       <a
         class="sw-package"
         href={`/packages/${item.slug}`}
-        style={`--package-accent:${item.color};--package-index:${index}`}
+        style={`--package-accent:${item.color};--package-glow:${item.color}40;--package-index:${index}`}
+        data-aw-glow
       >
         <div class="sw-package-top">
           <>
-            <span>{item.category}</span>
+            <span class="sw-package-cat">{item.category}</span>
             <span>{String(index + 1).padStart(2, '0')}</span>
           </>
         </div>
@@ -35,3 +36,16 @@ const items = compact ? packages.slice(0, 3) : packages;
     ))
   }
 </div>
+
+<script>
+  // Mouse-tracking border glow for package cards (respects reduced motion).
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll<HTMLElement>('[data-aw-glow]').forEach((card) => {
+    card.addEventListener('mousemove', (e: MouseEvent) => {
+      if (reduced) return;
+      const r = card.getBoundingClientRect();
+      card.style.setProperty('--sw-mx', (e.clientX - r.left).toFixed(1) + 'px');
+      card.style.setProperty('--sw-my', (e.clientY - r.top).toFixed(1) + 'px');
+    });
+  });
+</script>
