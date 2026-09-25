@@ -6,6 +6,8 @@ export const packages = [
     category: 'Core SEO',
     color: '#bfcbd7',
     image: '/images/offers/steady-wins-20-days-seo-boost-push-the-button.jpg',
+    imageV2: '/images/offers/steady-wins-20-days-seo-boost-push-the-buttonv2.jpg',
+    imageTextOnly: '/images/offers/steady-wins-20-days-seo-boost-push-the-button-text-only.jpg',
     imageAlt: 'Steady Wins 20 Days SEO Boost — Push the Button',
     icon: 'tabler:arrow-up-right',
     description:
@@ -19,6 +21,8 @@ export const packages = [
     category: 'Core SEO',
     color: '#f2cd63',
     image: '/images/offers/steady-wins-seo-perfect-storm-hit-the-button.jpg',
+    imageV2: '/images/offers/steady-wins-seo-perfect-storm-hit-the-button.jpg',
+    imageTextOnly: '/images/offers/steady-wins-seo-perfect-storm-hit-the-button.jpg',
     imageAlt: 'Steady Wins SEO Perfect Storm — Hit the Button',
     icon: 'tabler:bolt',
     description:
@@ -32,6 +36,8 @@ export const packages = [
     category: 'Links',
     color: '#86b9ff',
     image: '/images/offers/steady-on-new-links-all-month-flip-the-switch.jpg',
+    imageV2: '/images/offers/steady-on-new-links-all-month-flip-the-switchv2.jpg',
+    imageTextOnly: '/images/offers/steady-on-new-links-all-month-flip-the-switch-text-only.jpg',
     imageAlt: 'Steady On New Links All Month — Flip the Switch',
     icon: 'tabler:link',
     description:
@@ -45,6 +51,8 @@ export const packages = [
     category: 'Strategy',
     color: '#ffac62',
     image: '/images/offers/links-all-month.jpg',
+    imageV2: '/images/offers/links-all-monthv2.jpg',
+    imageTextOnly: '/images/offers/links-all-month.jpg',
     imageAlt: 'Links All Month',
     icon: 'tabler:target',
     description:
@@ -58,6 +66,8 @@ export const packages = [
     category: 'Links',
     color: '#ff8995',
     image: '/images/offers/straight-up-hard-hitting-guest-posts-that-push-the-needle.jpg',
+    imageV2: '/images/offers/straight-up-hard-hitting-guest-posts-that-push-the-needlev2.jpg',
+    imageTextOnly: '/images/offers/straight-up-hard-hitting-guest-posts-that-push-the-needle-text-only.jpg',
     imageAlt: 'Straight Up Hard Hitting Guest Posts That Push the Needle',
     icon: 'tabler:writing',
     description:
@@ -71,7 +81,9 @@ export const packages = [
     category: 'Links',
     color: '#fa906a',
     image: '/images/offers/the-pbn-network-whip-well-make-it-work.jpg',
-    imageAlt: 'The PNB Network Whip — We\'ll Make It Work',
+    imageV2: '/images/offers/the-pbn-network-whip-well-make-it-workv2.jpg',
+    imageTextOnly: '/images/offers/the-pbn-network-whip-well-make-it-work-text-only.jpg',
+    imageAlt: "The PBN Network Whip — We'll Make It Work",
     icon: 'tabler:network',
     description:
       'A specialist link option from the Steady Wins catalogue. Discuss the network approach, placement controls, and search-policy implications before choosing a scope.',
@@ -84,6 +96,8 @@ export const packages = [
     category: 'Strategy',
     color: '#fbda57',
     image: '/images/offers/steady-wins-easy-seo-quick-wins-hit-the-button.jpg',
+    imageV2: '/images/offers/steady-wins-easy-seo-quick-wins-hit-the-buttonv3.jpg',
+    imageTextOnly: '/images/offers/steady-wins-easy-seo-quick-wins-hit-the-button-text-only.jpg',
     imageAlt: 'Steady Wins Easy SEO Quick Wins — Hit the Button',
     icon: 'tabler:arrow-up-right',
     description:
@@ -97,6 +111,8 @@ export const packages = [
     category: 'Content',
     color: '#8ddcb0',
     image: '/images/offers/green-light-content-that-ranks-hit-green-to-go-up.jpg',
+    imageV2: '/images/offers/green-light-content-that-ranks-hit-green-to-go-up.jpg',
+    imageTextOnly: '/images/offers/green-light-content-that-ranks-hit-green-to-go-up.jpg',
     imageAlt: 'Green Light Content That Ranks — Hit Green to Go Up',
     icon: 'tabler:file-text',
     description:
@@ -110,6 +126,8 @@ export const packages = [
     category: 'Add-on',
     color: '#c4afff',
     image: '/images/offers/steady-wins-nitrous-seo-addon-hit-the-nos.jpg',
+    imageV2: '/images/offers/steady-wins-nitrous-seo-addon-hit-the-nosv2.jpg',
+    imageTextOnly: '/images/offers/steady-wins-nitrous-seo-addon-hit-the-nos-text-only.jpg',
     imageAlt: 'Steady Wins Nitrous SEO Addon — Hit the NOS',
     icon: 'tabler:adjustments',
     description:
