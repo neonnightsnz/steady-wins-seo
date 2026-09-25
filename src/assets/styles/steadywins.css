@@ -409,7 +409,7 @@
   .sw-package-image-wrap {
     position: relative;
     margin: 22px 0 0;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 12 / 4;
     overflow: hidden;
     border-radius: 12px;
     background: #09090b;
@@ -778,7 +778,7 @@
   }
   .sw-offer-hero-image {
     position: relative;
-    aspect-ratio: 16 / 7;
+    aspect-ratio: 16 / 9;
     max-width: 100%;
     border-radius: 18px;
     overflow: hidden;
