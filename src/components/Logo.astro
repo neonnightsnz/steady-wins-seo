@@ -1,16 +1,50 @@
 ---
-
 ---
-
-<span
-  class="inline-flex h-10 items-center rounded-lg bg-white pl-1.5 pr-2.5 shadow-sm ring-1 ring-black/10 dark:ring-white/10"
-  aria-hidden="false"
->
+<span class="sw-logo" data-logo>
   <img
     src="/images/logo.png"
     alt="Steady Wins logo"
-    class="h-7 w-auto object-contain"
+    class="sw-logo-static"
     loading="eager"
     fetchpriority="high"
+    width="1882"
+    height="836"
+  />
+  <img
+    src="/images/logo-animated.gif"
+    alt=""
+    aria-hidden="true"
+    class="sw-logo-animated"
+    loading="eager"
+    decoding="async"
+    width="1882"
+    height="836"
   />
 </span>
+
+<style is:global>
+  .sw-logo {
+    display: inline-flex;
+    position: relative;
+    line-height: 0;
+  }
+  .sw-logo img {
+    display: block;
+    width: 160px;
+    max-width: none;
+    height: auto;
+  }
+  .sw-logo .sw-logo-animated {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+  .sw-logo:hover .sw-logo-static {
+    opacity: 0;
+  }
+  .sw-logo:hover .sw-logo-animated {
+    opacity: 1;
+  }
+</style>
