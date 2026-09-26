@@ -28,7 +28,9 @@ const items = compact ? packages.slice(0, 3) : packages;
         </div>
         <Icon name={item.icon} class="sw-package-icon" />
         <h3>{item.name}</h3>
-        <p>{item.line}</p>
+        <p class="sw-package-tagline">{item.tagline}</p>
+        {item.price && <p class="sw-package-price">{item.price}</p>}
+        <p class="sw-package-desc">{item.line}</p>
         <div class="sw-package-bottom">
           Explore package <span aria-hidden="true">↗︎</span>
         </div>

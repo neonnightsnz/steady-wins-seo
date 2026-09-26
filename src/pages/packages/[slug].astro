@@ -1,91 +1,113 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import { packages } from '~/data/packages';
-import { pagesCopy } from '~/data/pagesCopy';
 export function getStaticPaths() {
   return packages.map((item) => ({ params: { slug: item.slug }, props: { item } }));
 }
 const { item } = Astro.props;
-const copy = pagesCopy[item.slug] ?? [];
-const first = copy[0];
-const body = copy.slice(1);
+const c = item.copy ?? {};
+const bullets = c.whatYouGet ?? [];
 ---
 
 <Layout metadata={{ title: item.name, description: item.description }}>
   <section class="sw-offer-hero">
-    <section class="sw-offer-hero">
-      <div class="sw-glow-canvas" aria-hidden="true">
-        <div class="sw-glow-spot sw-glow-spot--md" style="top:-140px;left:-120px;"></div>
-        <div class="sw-glow-spot sw-glow-spot--sm sw-glow-spot--accent" style="top: 60px; right: 8%;"></div>
-      </div>
-      <div class="sw-shell">
-        <header class="sw-offer-intro">
-          <a class="sw-back-link" href="/services">← All packages</a>
-          <p class="sw-eyebrow sw-offer-eyebrow">{item.category}</p>
-          <h1 class="sw-page-title sw-offer-title">{item.name}</h1>
-          {first && <p class="sw-offer-line">{first}</p>}
-          <div class="sw-offer-hero-image">
-            <img src={item.imageV2} alt={item.imageAlt} />
-            <span class="sw-status-pill sw-offer-badge"
-              ><span class="sw-status-dot"></span>{item.category} · Available</span
-            >
-          </div>
-          <div class="sw-offer-cta">
-            <a class="sw-button" href={'/contact?package=' + encodeURIComponent(item.name)}>Build my growth brief ↗</a>
-          </div>
-        </header>
-      </div>
-    </section>
-    {
-      body.length > 0 && (
-        <section class="sw-shell sw-section sw-copy">
-          <div class="sw-copy-grid">
-            {body.map((para) => {
-              const label = para.match(/^([^:]{2,40}):/)?.[1];
-              const isPitch =
-                /^(Intrigue|Identify the problem|Provide solutions|Show credentials|Details the benefits|Social proof|Add bonuses|Stack the value|Reveal your price|Inject scarcity|Give a powerful guarantee|Call to action|Warning|Close with a reminder)$/i.test(
-                  label || ''
-                );
-              return isPitch ? (
-                <div class="sw-copy-block">
-                  <h3>{label}</h3>
-                  <p>{para.slice((label as string).length + 1).trim()}</p>
-                </div>
-              ) : (
-                <p class="sw-copy-para">{para}</p>
-              );
-            })}
-          </div>
-          <div class="sw-offer-cta">
-            <a class="sw-button" href={'/contact?package=' + encodeURIComponent(item.name)}>
-              Build my growth brief ↗
-            </a>
-          </div>
-        </section>
-      )
-    }
-    <section class="sw-shell sw-section sw-offer-body">
-      <div class="sw-value">
-        <div>
-          <h2>Make it fit<br />your business.</h2>
-          <p class="sw-lead">{item.description}</p>
+    <div class="sw-glow-canvas" aria-hidden="true">
+      <div class="sw-glow-spot sw-glow-spot--md" style="top:-140px;left:-120px;"></div>
+      <div class="sw-glow-spot sw-glow-spot--sm sw-glow-spot--accent" style="top: 60px; right: 8%;"></div>
+    </div>
+    <div class="sw-shell">
+      <header class="sw-offer-intro">
+        <a class="sw-back-link" href="/services">← All packages</a>
+        <p class="sw-eyebrow sw-offer-eyebrow">{item.category}</p>
+        <h1 class="sw-page-title sw-offer-title">{item.name}</h1>
+        <p class="sw-offer-line">{item.intro}</p>
+        <div class="sw-offer-hero-image">
+          <img src={item.imageV2} alt={item.imageAlt} />
+          <span class="sw-status-pill sw-offer-badge"
+            ><span class="sw-status-dot"></span>{item.category} · {item.price || 'Available'}</span
+          >
+        </div>
+        <div class="sw-offer-cta">
           <a class="sw-button" href={'/contact?package=' + encodeURIComponent(item.name)}>Build my growth brief ↗</a>
         </div>
-        <div>
-          <p class="sw-eyebrow">What to discuss</p>
-          <ul>
-            {
-              item.focus.map((focus, i) => (
-                <li class="sw-focus-item">
-                  <span class="sw-focus-num">{String(i + 1).padStart(2, '0')}</span>
-                  <span>{focus}</span>
-                </li>
-              ))
-            }
-          </ul>
-          <p class="sw-lead">Final deliverables, pricing, and timing are agreed for your scope before work begins.</p>
-        </div>
+      </header>
+    </div>
+  </section>
+
+  {item.intro && (
+    <section class="sw-shell sw-section sw-copy">
+      <div class="sw-copy-grid">
+        <p class="sw-copy-lead">{item.intro}</p>
+
+        {c.problem && (
+          <div class="sw-copy-block">
+            <h3>The problem</h3>
+            <p>{c.problem}</p>
+          </div>
+        )}
+        {c.what && (
+          <div class="sw-copy-block">
+            <h3>What we do instead</h3>
+            <p>{c.what}</p>
+          </div>
+        )}
+        {c.why && (
+          <div class="sw-copy-block">
+            <h3>Why us</h3>
+            <p>{c.why}</p>
+          </div>
+        )}
+
+        {bullets.length > 0 && (
+          <div class="sw-copy-pack">
+            <h3>What you get</h3>
+            <ul>
+              {bullets.map((b) => (
+                <li>{b}</li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {/* Offer / price / capacity / guarantee stack */}
+        {(c.offer || item.price || c.capacity || c.guarantee) && (
+          <div class="sw-offer-stack">
+            {c.offer && (
+              <div class="sw-copy-block">
+                <h3>The offer</h3>
+                <p>{c.offer}</p>
+              </div>
+            )}
+            {item.price && (
+              <div class="sw-copy-block">
+                <h3>Price</h3>
+                <p>{item.price}</p>
+              </div>
+            )}
+            {c.capacity && (
+              <div class="sw-copy-block">
+                <h3>Capacity</h3>
+                <p>{c.capacity}</p>
+              </div>
+            )}
+            {c.guarantee && (
+              <div class="sw-copy-block">
+                <h3>The guarantee</h3>
+                <p>{c.guarantee}</p>
+              </div>
+            )}
+          </div>
+        )}
+
+        {c.cta && (
+          <div class="sw-copy-block sw-copy-cta">
+            <p>{c.cta}</p>
+          </div>
+        )}
+      </div>
+      <div class="sw-offer-cta">
+        <a class="sw-button" href={'/contact?package=' + encodeURIComponent(item.name)}>Build my growth brief ↗</a>
       </div>
     </section>
-  </section>
+  )}
 </Layout>
