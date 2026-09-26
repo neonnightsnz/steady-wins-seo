@@ -158,7 +158,7 @@ export const packages = [
     color: '#ffac62',
     image: '/images/offers/keywords-that-rank-v2.png',
     imageV2: '/images/offers/keywords-that-rank-v2.png',
-    imagePackages: '/images/offers/keywords-that-rank-packages.jpg',
+    imagePackages: '/images/offers/keywords-that-rank-packages.png',
     imageTextOnly: '/images/offers/keywords-that-rank-v2.png',
     imageAlt: 'Steady Wins Keywords That Rank',
     icon: 'tabler:target',

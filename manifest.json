@@ -1,0 +1,185 @@
+{
+  "version": 1,
+  "packages": [
+    {
+      "id": "20-day-seo-boost",
+      "displayName": "20 Day SEO Boost",
+      "slug": "steady-seo",
+      "category": "core",
+      "subBrand": "Steady Wins",
+      "addOn": false,
+      "color": "#bfcbd7",
+      "icon": "tabler:arrow-up-right",
+      "price": {
+        "amount": 499,
+        "billing": "one-time"
+      },
+      "assets": {
+        "thumbnail": "steady-seo-v2.png",
+        "text": "steady-wins-20-days-seo-boost-push-the-button-text-only.jpg",
+        "grid": "steady-seo-packages.png",
+        "title": "20-day-seo-boost.png"
+      }
+    },
+    {
+      "id": "content-that-ranks",
+      "displayName": "Content That Ranks",
+      "slug": "content-that-ranks",
+      "category": "content",
+      "subBrand": "Green Light",
+      "addOn": false,
+      "color": "#8ddcb0",
+      "icon": "tabler:file-text",
+      "price": {
+        "amount": 499,
+        "billing": "monthly"
+      },
+      "assets": {
+        "thumbnail": "content-that-ranks-v2.png",
+        "text": "green-light-content-that-ranks-hit-green-to-go-up-text-only.png",
+        "grid": "content-that-ranks-packages.png",
+        "title": null
+      }
+    },
+    {
+      "id": "hard-hitting-guest-posts",
+      "displayName": "Hard Hitting Guest Posts",
+      "slug": "steady-plus",
+      "category": "links",
+      "subBrand": "Straight Up",
+      "addOn": false,
+      "color": "#ff8995",
+      "icon": "tabler:writing",
+      "price": {
+        "amount": 499,
+        "billing": "one-time"
+      },
+      "assets": {
+        "thumbnail": "steady-plus-v2.png",
+        "text": "straight-up-hard-hitting-guest-posts-that-push-the-needle-text-only.jpg",
+        "grid": "steady-plus-packages.png",
+        "title": null
+      }
+    },
+    {
+      "id": "keywords-that-rank",
+      "displayName": "Keywords That Rank",
+      "slug": "keywords-that-rank",
+      "category": "strategy",
+      "subBrand": "Steady Wins",
+      "addOn": false,
+      "color": "#ffac62",
+      "icon": "tabler:target",
+      "price": {
+        "amount": 499,
+        "billing": "one-time"
+      },
+      "assets": {
+        "thumbnail": "keywords-that-rank-v2.png",
+        "text": "keywords-that-rank-v2.png",
+        "grid": "keywords-that-rank-packages.jpg",
+        "title": null
+      }
+    },
+    {
+      "id": "new-links-all-month",
+      "displayName": "New Links All Month",
+      "slug": "links-all-month",
+      "category": "links",
+      "subBrand": "Steady On",
+      "addOn": false,
+      "color": "#86b9ff",
+      "icon": "tabler:link",
+      "price": {
+        "amount": 499,
+        "billing": "monthly"
+      },
+      "assets": {
+        "thumbnail": "links-all-month-v2.png",
+        "text": "steady-on-new-links-all-month-flip-the-switch-text-only.jpg",
+        "grid": "links-all-month-packages.png",
+        "title": null
+      }
+    },
+    {
+      "id": "nitrous-seo-addon",
+      "displayName": "Nitrous SEO Add-on",
+      "slug": "nitros",
+      "category": "core",
+      "subBrand": "Steady Wins",
+      "addOn": true,
+      "color": "#c4afff",
+      "icon": "tabler:adjustments",
+      "price": {
+        "amount": 299,
+        "billing": "one-time"
+      },
+      "assets": {
+        "thumbnail": "nitros-v2.png",
+        "text": "steady-wins-nitrous-seo-addon-hit-the-nos-text-only.jpg",
+        "grid": "nitros-packages.png",
+        "title": null
+      }
+    },
+    {
+      "id": "seo-perfect-storm",
+      "displayName": "SEO Perfect Storm",
+      "slug": "seo-perfect-storm",
+      "category": "core",
+      "subBrand": "Steady Wins",
+      "addOn": false,
+      "color": "#f2cd63",
+      "icon": "tabler:bolt",
+      "price": {
+        "amount": 999,
+        "billing": "monthly"
+      },
+      "assets": {
+        "thumbnail": "seo-perfect-storm-v2.png",
+        "text": "steady-wins-seo-perfect-storm-hit-the-button.jpg",
+        "grid": "seo-perfect-storm-packages.png",
+        "title": null
+      }
+    },
+    {
+      "id": "easy-seo-quick-wins",
+      "displayName": "Easy SEO Quick Wins",
+      "slug": "quick-wins",
+      "category": "strategy",
+      "subBrand": "Steady Wins",
+      "addOn": false,
+      "color": "#fbda57",
+      "icon": "tabler:arrow-up-right",
+      "price": {
+        "amount": 499,
+        "billing": "one-time"
+      },
+      "assets": {
+        "thumbnail": "quick-wins-v2.png",
+        "text": "steady-wins-easy-seo-quick-wins-hit-the-button-text-only.jpg",
+        "grid": "quick-wins-packages.png",
+        "title": null
+      }
+    },
+    {
+      "id": "the-pbn-network-whip",
+      "displayName": "The PBN Network Whip",
+      "slug": "pbn-network",
+      "category": "links",
+      "subBrand": "Steady Wins",
+      "addOn": false,
+      "color": "#fa906a",
+      "icon": "tabler:network",
+      "price": {
+        "amount": 199,
+        "billing": "per-link"
+      },
+      "assets": {
+        "thumbnail": "pbn-network-v2.png",
+        "text": "the-pbn-network-whip-well-make-it-work-text-only.jpg",
+        "grid": "pbn-network-packages.png",
+        "title": null
+      }
+    }
+  ]
+}
