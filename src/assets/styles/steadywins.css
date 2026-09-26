@@ -737,232 +737,6 @@
       transition: none;
     }
   }
-  /* Offer (package) page hero */
-  .sw-offer-hero {
-    position: relative;
-    overflow: hidden;
-    background: #0a0a0c;
-    border-bottom: 1px solid var(--sw-border);
-    margin-bottom: 48px;
-  }
-  .sw-offer-intro {
-    position: relative;
-    z-index: 1;
-    max-width: 860px;
-    padding-block: 64px 72px;
-  }
-  .sw-back-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    color: var(--aw-color-text-muted);
-    font-weight: 650;
-    font-size: 0.9rem;
-    margin-bottom: 40px;
-    transition: color 0.2s;
-  }
-  .sw-back-link:hover {
-    color: var(--sw-glow);
-  }
-  .sw-offer-eyebrow {
-    color: var(--sw-glow);
-  }
-  .sw-offer-title {
-    margin-bottom: 20px;
-  }
-  .sw-offer-line {
-    font-size: 1.35rem;
-    line-height: 1.5;
-    color: #d1d5db;
-    margin-bottom: 36px;
-  }
-  .sw-offer-hero-image {
-    position: relative;
-    aspect-ratio: 16 / 9;
-    max-width: 100%;
-    border-radius: 18px;
-    overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.09);
-    box-shadow: 0 30px 80px -30px rgba(0, 0, 0, 0.9);
-    background: #09090b;
-  }
-  .sw-offer-hero-image img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .sw-offer-badge {
-    position: absolute;
-    top: 18px;
-    left: 18px;
-    background: rgba(10, 10, 12, 0.72);
-    backdrop-filter: blur(6px);
-  }
-  .sw-offer-cta {
-    margin-top: 32px;
-  }
-  .sw-offer-body .sw-lead {
-    max-width: 520px;
-  }
-  .sw-offer-body ul {
-    list-style: none;
-    padding-left: 0;
-  }
-  .sw-focus-item {
-    display: flex;
-    align-items: baseline;
-    gap: 18px;
-    padding: 18px 0;
-    border-bottom: 1px solid var(--sw-border);
-    font-size: 1.2rem;
-    font-weight: 650;
-    color: var(--aw-color-text-default);
-  }
-  .sw-focus-num {
-    font-family: var(--aw-font-sans, ui-monospace, monospace);
-    font-size: 0.8rem;
-    font-weight: 800;
-    color: var(--sw-glow);
-    flex-shrink: 0;
-  }
-  @media (max-width: 767px) {
-    .sw-offer-hero-image {
-      aspect-ratio: 16 / 10;
-    }
-    .sw-offer-intro {
-      padding-block: 40px 48px;
-    }
-  }
-
-  /* Workflow step markers (Steps2) */
-  .sw-step-marker {
-    display: inline-flex;
-    width: 56px;
-    height: 56px;
-    align-items: center;
-    justify-content: center;
-    border-radius: 999px;
-    color: #06070a;
-    background: var(--sw-glow);
-    box-shadow: 0 0 18px rgba(192, 255, 0, 0.45);
-    font-weight: 800;
-  }
-  .sw-step-num {
-    font-family: var(--aw-font-sans, ui-monospace, monospace);
-    font-size: 1.5rem;
-    font-weight: 800;
-  }
-
-  /* FAQ glass accordion */
-  .sw-faq-list {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-  }
-  .sw-faq-item {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 16px;
-    overflow: hidden;
-    transition:
-      border-color 0.2s,
-      box-shadow 0.2s,
-      background 0.2s;
-  }
-  .sw-faq-item[open] {
-    border-color: rgba(192, 255, 0, 0.35);
-    box-shadow: 0 0 24px -10px rgba(192, 255, 0, 0.35);
-  }
-  .sw-faq-q {
-    position: relative;
-    padding: 20px 24px;
-    transition: background 0.2s;
-  }
-  .sw-faq-q:hover {
-    background: rgba(255, 255, 255, 0.04);
-  }
-  .sw-faq-q::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 4px;
-    background: var(--sw-glow);
-    box-shadow: 0 0 14px rgba(192, 255, 0, 0.6);
-    opacity: 0;
-    transition: opacity 0.2s;
-  }
-  .sw-faq-item[open] .sw-faq-q::before,
-  .sw-faq-q:hover::before {
-    opacity: 1;
-  }
-
-  /* Feature / problem cards (Features widget) */
-  .sw-feature-wrap {
-    height: 100%;
-  }
-  .sw-feature-card {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 16px;
-    padding: 24px;
-    height: 100%;
-    transition:
-      border-color 0.2s,
-      box-shadow 0.2s,
-      background 0.2s;
-  }
-  .sw-feature-card:hover {
-    border-color: rgba(192, 255, 0, 0.4);
-    background: rgba(255, 255, 255, 0.045);
-    box-shadow: 0 0 26px -8px rgba(192, 255, 0, 0.3);
-  }
-
-  /* Hero growth-brief form panel */
-  .sw-hero-form {
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 18px;
-    padding: 24px 24px 26px;
-    margin-bottom: 26px;
-    max-width: 480px;
-  }
-  .sw-hero-form .sw-eyebrow {
-    color: var(--sw-glow);
-    margin-bottom: 18px;
-  }
-  .sw-hero-form .sw-form {
-    background: transparent;
-    border: none;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    gap: 16px;
-  }
-  .sw-hero-form .sw-form label {
-    color: #d1d5db;
-  }
-  .sw-hero-form .sw-form input,
-  .sw-hero-form .sw-form select,
-  .sw-hero-form .sw-form textarea {
-    background: rgba(10, 10, 12, 0.6);
-    border: 1px solid rgba(255, 255, 255, 0.14);
-    color: #f5f5f7;
-  }
-  .sw-hero-form .sw-form input:focus,
-  .sw-hero-form .sw-form select:focus,
-  .sw-hero-form .sw-form textarea:focus {
-    border-color: rgba(192, 255, 0, 0.55);
-  }
-  .sw-hero-form .sw-form small {
-    color: #9ca3af;
-  }
-  .sw-hero-cta {
-    margin-bottom: 28px;
-  }
-
   /* Reference page-copy section on offer pages */
   .sw-copy {
     max-width: 860px;
@@ -1059,6 +833,124 @@
     color: #cbd1cb;
     line-height: 1.5;
     font-size: 0.95rem;
+  }
+
+  /* Offer hero — content column, image faded behind right (per redesign) */
+  .sw-offer-hero {
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid var(--sw-border);
+  }
+  .sw-offer-hero-inner {
+    position: relative;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+  }
+  .sw-offer-hero-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: auto;
+    max-width: none;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.5) 22%, black 42%);
+    mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.5) 22%, black 42%);
+    pointer-events: none;
+  }
+  .sw-offer-intro {
+    position: relative;
+    z-index: 2;
+    max-width: 560px;
+    padding: 72px 0;
+  }
+  .sw-back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--aw-color-text-muted);
+    font-weight: 650;
+    font-size: 0.9rem;
+    margin-bottom: 40px;
+    transition: color 0.2s;
+  }
+  .sw-back-link:hover {
+    color: var(--sw-glow);
+  }
+  .sw-offer-title {
+    font-size: clamp(2.6rem, 5vw, 4.2rem);
+    font-weight: 850;
+    letter-spacing: -0.05em;
+    line-height: 1;
+    margin: 0 0 22px;
+    max-width: 12ch;
+  }
+  .sw-offer-eyebrow {
+    margin-bottom: 14px;
+  }
+
+  .sw-offer-sub {
+    color: var(--aw-color-text-muted);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    max-width: 46ch;
+    margin: 0 0 20px;
+  }
+  .sw-offer-price {
+    margin-bottom: 18px;
+  }
+
+  /* Rank tracker */
+  .sw-track-card {
+    background: var(--sw-surface, #0d0e12);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 24px;
+  }
+  .sw-track-title {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--aw-color-text-muted);
+    margin-bottom: 16px;
+  }
+  .sw-track-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .sw-track-step {
+    padding: 8px 14px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--aw-color-text-muted);
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  .sw-track-step--on {
+    border-color: rgba(192, 255, 0, 0.5);
+    color: var(--sw-glow);
+    box-shadow: 0 0 14px rgba(192, 255, 0, 0.25);
+  }
+
+  @media (max-width: 820px) {
+    .sw-offer-hero-inner {
+      min-height: 0;
+      display: block;
+    }
+    .sw-offer-hero-bg {
+      position: relative;
+      width: 100%;
+      height: auto;
+      margin-top: 8px;
+      -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 30%);
+      mask-image: linear-gradient(to bottom, transparent 0%, black 30%);
+    }
+    .sw-offer-intro {
+      max-width: none;
+      padding: 36px 0 8px;
+    }
   }
 
   /* Offer hero split: image + brief form */

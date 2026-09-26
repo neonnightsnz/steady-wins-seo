@@ -3,6 +3,7 @@ export const packages = [
     slug: 'steady-seo',
     name: '20 Day SEO Boost',
     line: "Your competitors are ranking. You're not. That gap doesn't close by itself.",
+    sub: "That gap doesn't close by itself — it closes with a focused 20-day link campaign.",
     category: 'Core SEO',
     color: '#bfcbd7',
     image: '/images/offers/steady-wins-20-days-seo-boost-push-the-button.jpg',
@@ -11,9 +12,8 @@ export const packages = [
     imageTextOnly: '/images/offers/steady-wins-20-days-seo-boost-push-the-button-text-only.jpg',
     imageAlt: 'Steady Wins 20 Days SEO Boost — Push the Button',
     icon: 'tabler:arrow-up-right',
-    description: "Your competitors are ranking. You're not. That gap doesn't close by itself.",
-    headline: '20 DAY SEO BOOST',
     tagline: 'Push the Button',
+    description: "Your competitors are ranking. You're not. That gap doesn't close by itself.",
     intro: "Your competitors are ranking. You're not. That gap doesn't close by itself.",
     price: '$499 — one-time, 20-day campaign.',
     offer:
@@ -52,7 +52,8 @@ export const packages = [
   {
     slug: 'content-that-ranks',
     name: 'Content That Ranks',
-    line: "Every page without the right content on it is a page that's stuck at the same li",
+    line: "Every page without the right content on it is a page that's stuck at the same light, watching everyone else move.",
+    sub: 'Every page without the right content is a page stuck at the same light, watching everyone else move.',
     category: 'Content',
     color: '#8ddcb0',
     image: '/images/offers/green-light-content-that-ranks-hit-green-to-go-up.jpg',
@@ -61,10 +62,9 @@ export const packages = [
     imageTextOnly: '/images/offers/green-light-content-that-ranks-hit-green-to-go-up-text-only.png',
     imageAlt: 'Green Light Content That Ranks — Hit Green to Go Up',
     icon: 'tabler:file-text',
+    tagline: 'Hit Green to Go Up',
     description:
       "Every page without the right content on it is a page that's stuck at the same light, watching everyone else move.",
-    headline: 'CONTENT THAT RANKS',
-    tagline: 'Hit Green to Go Up',
     intro:
       "Every page without the right content on it is a page that's stuck at the same light, watching everyone else move.",
     price:
@@ -104,7 +104,8 @@ export const packages = [
   {
     slug: 'steady-plus',
     name: 'Hard Hitting Guest Posts',
-    line: "Here's what you get: real guest posts, on real sites, that actually move your ra",
+    line: "Here's what you get: real guest posts, on real sites, that actually move your rankings. No fluff.",
+    sub: 'Real guest posts on real sites that actually move your rankings. No fluff.',
     category: 'Links',
     color: '#ff8995',
     image: '/images/offers/straight-up-hard-hitting-guest-posts-that-push-the-needle.jpg',
@@ -113,9 +114,8 @@ export const packages = [
     imageTextOnly: '/images/offers/straight-up-hard-hitting-guest-posts-that-push-the-needle-text-only.jpg',
     imageAlt: 'Straight Up Hard Hitting Guest Posts That Push the Needle',
     icon: 'tabler:writing',
-    description: "Here's what you get: real guest posts, on real sites, that actually move your rankings. No fluff.",
-    headline: 'HARD HITTING GUEST POSTS',
     tagline: 'That Push the Needle',
+    description: "Here's what you get: real guest posts, on real sites, that actually move your rankings. No fluff.",
     intro: "Here's what you get: real guest posts, on real sites, that actually move your rankings. No fluff.",
     price: '$499 — one-time, per batch of placements.',
     offer: '10% off your first order. Free on-page action plan included.',
@@ -152,7 +152,8 @@ export const packages = [
   {
     slug: 'keywords-that-rank',
     name: 'Keywords That Rank',
-    line: 'Wrong keywords, perfect content — still nothing. The words you target decide eve',
+    line: 'Wrong keywords, perfect content — still nothing. The words you target decide everything downstream.',
+    sub: 'The right words make everything downstream convert.',
     category: 'Strategy',
     color: '#ffac62',
     image: '/images/offers/keywords-that-rank-v2.png',
@@ -161,9 +162,8 @@ export const packages = [
     imageTextOnly: '/images/offers/keywords-that-rank-v2.png',
     imageAlt: 'Steady Wins Keywords That Rank',
     icon: 'tabler:target',
-    description: 'Wrong keywords, perfect content — still nothing. The words you target decide everything downstream.',
-    headline: 'KEYWORDS THAT RANK',
     tagline: 'Lock In the Right Words',
+    description: 'Wrong keywords, perfect content — still nothing. The words you target decide everything downstream.',
     intro: 'Wrong keywords, perfect content — still nothing. The words you target decide everything downstream.',
     price: '$499 — one-time keyword strategy package.',
     offer: '10% off your first month. Free SEO audit and strategy session included.',
@@ -200,7 +200,8 @@ export const packages = [
   {
     slug: 'links-all-month',
     name: 'New Links All Month',
-    line: 'This is a monthly recurring service — not a one-time delivery. Flip it on once, ',
+    line: 'This is a monthly recurring service — not a one-time delivery. Flip it on once, and it keeps running every month until y',
+    sub: 'Flip it on once, and it keeps building authority every month.',
     category: 'Links',
     color: '#86b9ff',
     image: '/images/offers/steady-on-new-links-all-month-flip-the-switch.jpg',
@@ -209,10 +210,9 @@ export const packages = [
     imageTextOnly: '/images/offers/steady-on-new-links-all-month-flip-the-switch-text-only.jpg',
     imageAlt: 'Steady On New Links All Month — Flip the Switch',
     icon: 'tabler:link',
+    tagline: 'Flip the Switch',
     description:
       'This is a monthly recurring service — not a one-time delivery. Flip it on once, and it keeps running every month until you tell us to stop.',
-    headline: 'NEW LINKS ALL MONTH',
-    tagline: 'Flip the Switch',
     intro:
       'This is a monthly recurring service — not a one-time delivery. Flip it on once, and it keeps running every month until you tell us to stop.',
     price: '$499/month — recurring, cancel anytime.',
@@ -246,7 +246,8 @@ export const packages = [
   {
     slug: 'nitros',
     name: 'Nitrous SEO Add-on',
-    line: 'Existing customers only. This is a booster layered onto an active or recent Stea',
+    line: 'Existing customers only. This is a booster layered onto an active or recent Steady Wins order — not a standalone service',
+    sub: "Existing customers only — boost an active campaign that's already working.",
     category: 'Add-on',
     color: '#c4afff',
     image: '/images/offers/steady-wins-nitrous-seo-addon-hit-the-nos.jpg',
@@ -255,10 +256,9 @@ export const packages = [
     imageTextOnly: '/images/offers/steady-wins-nitrous-seo-addon-hit-the-nos-text-only.jpg',
     imageAlt: 'Steady Wins Nitrous SEO Addon — Hit the NOS',
     icon: 'tabler:adjustments',
+    tagline: 'Hit the NOS',
     description:
       'Existing customers only. This is a booster layered onto an active or recent Steady Wins order — not a standalone service.',
-    headline: 'NITROUS SEO ADD-ON',
-    tagline: 'Hit the NOS',
     intro:
       'Existing customers only. This is a booster layered onto an active or recent Steady Wins order — not a standalone service.',
     price: '$299 — one-time addon to an active order.',
@@ -290,7 +290,8 @@ export const packages = [
   {
     slug: 'seo-perfect-storm',
     name: 'SEO Perfect Storm',
-    line: 'This is the full build: audit, strategy, content, and a link campaign sized to a',
+    line: 'This is the full build: audit, strategy, content, and a link campaign sized to actually move a competitive market — not ',
+    sub: 'Audit, strategy, content, and a link build sized to a competitive market.',
     category: 'Core SEO',
     color: '#f2cd63',
     image: '/images/offers/steady-wins-seo-perfect-storm-hit-the-button.jpg',
@@ -299,10 +300,9 @@ export const packages = [
     imageTextOnly: '/images/offers/steady-wins-seo-perfect-storm-hit-the-button.jpg',
     imageAlt: 'Steady Wins SEO Perfect Storm — Hit the Button',
     icon: 'tabler:bolt',
-    description:
-      'This is the full build: audit, strategy, content, and a link campaign sized to actually move a competitive market — not a starter package with a bigger',
-    headline: 'SEO PERFECT STORM',
     tagline: 'Hit the Button',
+    description:
+      'This is the full build: audit, strategy, content, and a link campaign sized to actually move a competitive market — not a starter package with a bigge',
     intro:
       'This is the full build: audit, strategy, content, and a link campaign sized to actually move a competitive market — not a starter package with a bigger price tag.',
     price: '$999/month.',
@@ -342,7 +342,8 @@ export const packages = [
   {
     slug: 'quick-wins',
     name: 'Easy SEO Quick Wins',
-    line: "You're closer than you think. The pages ranking on page 2 or 3 right now are you",
+    line: "You're closer than you think. The pages ranking on page 2 or 3 right now are your fastest path to page 1 — if someone ac",
+    sub: 'Pages already on page 2–3 are your fastest path to page 1.',
     category: 'Strategy',
     color: '#fbda57',
     image: '/images/offers/steady-wins-easy-seo-quick-wins-hit-the-button.jpg',
@@ -351,10 +352,9 @@ export const packages = [
     imageTextOnly: '/images/offers/steady-wins-easy-seo-quick-wins-hit-the-button-text-only.jpg',
     imageAlt: 'Steady Wins Easy SEO Quick Wins — Hit the Button',
     icon: 'tabler:arrow-up-right',
+    tagline: 'Flip It On',
     description:
       "You're closer than you think. The pages ranking on page 2 or 3 right now are your fastest path to page 1 — if someone actually goes and pushes them.",
-    headline: 'EASY SEO QUICK WINS',
-    tagline: 'Flip It On',
     intro:
       "You're closer than you think. The pages ranking on page 2 or 3 right now are your fastest path to page 1 — if someone actually goes and pushes them.",
     price: '$499 — one-time.',
@@ -394,7 +394,8 @@ export const packages = [
   {
     slug: 'pbn-network',
     name: 'The PBN Network Whip',
-    line: "Most PBN links are shared across a dozen other vendors' clients and worth exactl",
+    line: "Most PBN links are shared across a dozen other vendors' clients and worth exactly what you paid for them. Ours aren't.",
+    sub: 'Private-network links matched to your niche — not shared junk.',
     category: 'Links',
     color: '#fa906a',
     image: '/images/offers/the-pbn-network-whip-well-make-it-work.jpg',
@@ -403,10 +404,9 @@ export const packages = [
     imageTextOnly: '/images/offers/the-pbn-network-whip-well-make-it-work-text-only.jpg',
     imageAlt: "The PBN Network Whip — We'll Make It Work",
     icon: 'tabler:network',
+    tagline: "We'll Put Links to Work",
     description:
       "Most PBN links are shared across a dozen other vendors' clients and worth exactly what you paid for them. Ours aren't.",
-    headline: 'THE PBN NETWORK WHIP',
-    tagline: "We'll Put Links to Work",
     intro:
       "Most PBN links are shared across a dozen other vendors' clients and worth exactly what you paid for them. Ours aren't.",
     price: '$199 per link.',

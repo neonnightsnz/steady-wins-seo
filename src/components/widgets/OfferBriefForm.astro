@@ -9,21 +9,12 @@ const { packageName } = Astro.props;
   <p class="sw-offer-form-label"><span>Starting a brief for:</span> <strong>{packageName}</strong></p>
   <label
     >Your name
-    <input type="text" name="name" autocomplete="name" maxlength="120" required />
+    <input type="text" name="name" placeholder="Jane Smith" autocomplete="name" maxlength="120" required />
   </label>
   <label
     >Website URL
-    <input
-      type="url"
-      name="website"
-      placeholder="https://yourwebsite.com"
-      autocomplete="off"
-      maxlength="500"
-      required
-    />
+    <input type="text" name="website" placeholder="yourbusiness.co.nz" autocomplete="off" maxlength="500" required />
   </label>
   <input type="hidden" name="package" value={packageName} />
-  <button class="sw-button sw-offer-form-btn" type="submit"
-    >Start my growth brief <span aria-hidden="true">↗</span></button
-  >
+  <button class="sw-button sw-offer-form-btn" type="submit">Get my starting point</button>
 </form>
