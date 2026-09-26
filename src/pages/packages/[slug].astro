@@ -4,8 +4,31 @@ import { packages } from '~/data/packages';
 export function getStaticPaths() {
   return packages.map((item) => ({ params: { slug: item.slug }, props: { item } }));
 }
-const { item } = Astro.props;
-const c = item.copy ?? {};
+interface Copy {
+  problem?: string;
+  what?: string;
+  why?: string;
+  whatYouGet?: readonly string[];
+  offer?: string;
+  price?: string;
+  capacity?: string;
+  guarantee?: string;
+  cta?: string;
+}
+interface Item {
+  slug: string;
+  name: string;
+  description?: string;
+  category: string;
+  tagline?: string;
+  intro?: string;
+  price?: string;
+  imageV2?: string;
+  imageAlt?: string;
+  copy?: Copy;
+}
+const { item } = Astro.props as unknown as { item: Item };
+const c: Copy = item.copy ?? {};
 const bullets = c.whatYouGet ?? [];
 ---
 
@@ -34,80 +57,84 @@ const bullets = c.whatYouGet ?? [];
     </div>
   </section>
 
-  {item.intro && (
-    <section class="sw-shell sw-section sw-copy">
-      <div class="sw-copy-grid">
-        <p class="sw-copy-lead">{item.intro}</p>
+  {
+    item.intro && (
+      <section class="sw-shell sw-section sw-copy">
+        <div class="sw-copy-grid">
+          <p class="sw-copy-lead">{item.intro}</p>
 
-        {c.problem && (
-          <div class="sw-copy-block">
-            <h3>The problem</h3>
-            <p>{c.problem}</p>
-          </div>
-        )}
-        {c.what && (
-          <div class="sw-copy-block">
-            <h3>What we do instead</h3>
-            <p>{c.what}</p>
-          </div>
-        )}
-        {c.why && (
-          <div class="sw-copy-block">
-            <h3>Why us</h3>
-            <p>{c.why}</p>
-          </div>
-        )}
+          {c.problem && (
+            <div class="sw-copy-block">
+              <h3>The problem</h3>
+              <p>{c.problem}</p>
+            </div>
+          )}
+          {c.what && (
+            <div class="sw-copy-block">
+              <h3>What we do instead</h3>
+              <p>{c.what}</p>
+            </div>
+          )}
+          {c.why && (
+            <div class="sw-copy-block">
+              <h3>Why us</h3>
+              <p>{c.why}</p>
+            </div>
+          )}
 
-        {bullets.length > 0 && (
-          <div class="sw-copy-pack">
-            <h3>What you get</h3>
-            <ul>
-              {bullets.map((b) => (
-                <li>{b}</li>
-              ))}
-            </ul>
-          </div>
-        )}
+          {bullets.length > 0 && (
+            <div class="sw-copy-pack">
+              <h3>What you get</h3>
+              <ul>
+                {bullets.map((b) => (
+                  <li>{b}</li>
+                ))}
+              </ul>
+            </div>
+          )}
 
-        {/* Offer / price / capacity / guarantee stack */}
-        {(c.offer || item.price || c.capacity || c.guarantee) && (
-          <div class="sw-offer-stack">
-            {c.offer && (
-              <div class="sw-copy-block">
-                <h3>The offer</h3>
-                <p>{c.offer}</p>
-              </div>
-            )}
-            {item.price && (
-              <div class="sw-copy-block">
-                <h3>Price</h3>
-                <p>{item.price}</p>
-              </div>
-            )}
-            {c.capacity && (
-              <div class="sw-copy-block">
-                <h3>Capacity</h3>
-                <p>{c.capacity}</p>
-              </div>
-            )}
-            {c.guarantee && (
-              <div class="sw-copy-block">
-                <h3>The guarantee</h3>
-                <p>{c.guarantee}</p>
-              </div>
-            )}
-          </div>
-        )}
+          {/* Offer / price / capacity / guarantee stack */}
+          {(c.offer || item.price || c.capacity || c.guarantee) && (
+            <div class="sw-offer-stack">
+              {c.offer && (
+                <div class="sw-copy-block">
+                  <h3>The offer</h3>
+                  <p>{c.offer}</p>
+                </div>
+              )}
+              {item.price && (
+                <div class="sw-copy-block">
+                  <h3>Price</h3>
+                  <p>{item.price}</p>
+                </div>
+              )}
+              {c.capacity && (
+                <div class="sw-copy-block">
+                  <h3>Capacity</h3>
+                  <p>{c.capacity}</p>
+                </div>
+              )}
+              {c.guarantee && (
+                <div class="sw-copy-block">
+                  <h3>The guarantee</h3>
+                  <p>{c.guarantee}</p>
+                </div>
+              )}
+            </div>
+          )}
 
-        {c.cta && (
-          <div class="sw-copy-block sw-copy-cta">
-            <p>{c.cta}</p>
-          </div>
-        )}
-      </div>
-      <div class="sw-offer-cta">
-        <a class="sw-button" href={'/contact?package=' + encodeURIComponent(item.name)}>Build my growth brief ↗</a>
-      </div>
-    </section>
-  )}
+          {c.cta && (
+            <div class="sw-copy-block sw-copy-cta">
+              <p>{c.cta}</p>
+            </div>
+          )}
+        </div>
+        <div class="sw-offer-cta">
+          <a class="sw-button" href={'/contact?package=' + encodeURIComponent(item.name)}>
+            Build my growth brief ↗
+          </a>
+        </div>
+      </section>
+    )
+  }
 </Layout>

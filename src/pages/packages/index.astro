@@ -1,0 +1,24 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import PackageGrid from '~/components/widgets/PackageGrid.astro';
+---
+
+<Layout
+  metadata={{
+    title: 'Packages',
+    description: 'Explore nine Steady Wins SEO packages: keyword strategy, content, links, and focused growth work.',
+  }}
+>
+  <div class="sw-shell">
+    <header class="sw-page-intro">
+      <span class="sw-status-pill"><span class="sw-status-dot"></span> The Steady Wins catalogue</span>
+      <h1 class="sw-page-title">Choose your <span class="sw-kw">next move</span>.</h1>
+      <p class="sw-lead">Nine focused SEO packages. Pick the one that matches your next growth priority.</p>
+    </header>
+    <section class="pb-24" aria-label="SEO packages"><PackageGrid /></section>
+    <section class="sw-close">
+      <h2>Find your direction.<br />Define the work.</h2>
+      <a class="sw-button" href="/contact">Build my growth brief ↗</a>
+    </section>
+  </div>
+</Layout>
