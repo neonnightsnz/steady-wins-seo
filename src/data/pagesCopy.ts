@@ -1,7 +1,7 @@
 // Full landing-page copy for each package, sourced from reference/pages copy.
 // Maps slug -> array of paragraphs to render on the package detail page.
 export const pagesCopy: Record<string, string[]> = {
-  'steady-seo': [
+  '20-day-seo-boost': [
     'Boost Your Search Engine Rankings and Drive More Traffic with Our Proven Link Building Strategy for $499',
     "Attention all business owners and marketing professionals: Are you tired of the same old link building techniques that just don't seem to deliver results? Are you ready to take your online presence to the next level with a steady stream of high-quality, authoritative links? Look no further than Steady on New Links All Month.",
     'Our big, bold headline: Boost Your Search Engine Rankings and Drive More Traffic with Our Proven Link Building Strategy',

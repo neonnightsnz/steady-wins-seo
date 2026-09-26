@@ -1,5 +1,15 @@
 # AstroWind Agent Instructions
 
+## Agent skills
+
+### Issue tracker
+
+Issues and specs live in GitHub Issues for `neonnightsnz/steady-wins-seo`; use the `gh` CLI. See `docs/agents/issue-tracker.md`.
+
+### Domain docs
+
+This is a single-context repository. See `docs/agents/domain.md`.
+
 ## Project Overview
 
 AstroWind is a free, open-source website template built with **Astro v7** and **Tailwind CSS v4**. It generates a fully static site optimized for performance, SEO, and accessibility.

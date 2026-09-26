@@ -20,7 +20,7 @@ export interface PackageExtra {
 }
 
 export const packageExtra: Record<string, PackageExtra> = {
-  'steady-seo': {
+  '20-day-seo-boost': {
     problems: [
       {
         title: 'Someone else is closing your client',

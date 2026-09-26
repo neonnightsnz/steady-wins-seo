@@ -1,6 +1,6 @@
 export const packages = [
   {
-    slug: 'steady-seo',
+    slug: '20-day-seo-boost',
     name: '20 Day SEO Boost',
     line: "Your competitors are ranking. You're not. That gap doesn't close by itself.",
     sub: "That gap doesn't close by itself — it closes with a focused 20-day link campaign.",

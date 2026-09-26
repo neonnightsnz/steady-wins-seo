@@ -40,24 +40,34 @@ interface Item {
 const { item } = Astro.props as unknown as { item: Item };
 const c = item.copy ?? {};
 const extra = packageExtra[item.slug] ?? { problems: [], timeline: [], testimonials: [] };
+const representative = item.slug === '20-day-seo-boost';
 ---
 
 <Layout metadata={{ title: item.name, description: item.description }}>
   {/* Hero: content column with the image faded behind right, form inline */}
-  <section class="sw-offer-hero">
+  <section class:list={['sw-offer-hero', representative && 'sw-offer-hero--representative']}>
     <div class="sw-offer-hero-inner">
-      <img class="sw-offer-hero-bg" src={item.imageV2} alt={item.imageAlt} loading="eager" fetchpriority="high" />
+      {
+        representative ? (
+          <div class="sw-offer-artwork">
+            <img class="sw-offer-hero-bg" src={item.imageV2} alt={item.imageAlt} loading="eager" fetchpriority="high" />
+          </div>
+        ) : (
+          <img class="sw-offer-hero-bg" src={item.imageV2} alt={item.imageAlt} loading="eager" fetchpriority="high" />
+        )
+      }
       <div class="sw-shell">
         <header class="sw-offer-intro">
           <a class="sw-back-link" href="/packages">← All packages</a>
           <div class="sw-offer-eyebrow">
             <span class="sw-status-pill"><span class="sw-status-dot"></span>{item.category} package</span>
           </div>
+          {representative && <p class="sw-offer-brand">{item.name}</p>}
           <h1 class="sw-offer-title">{item.intro}</h1>
           <p class="sw-offer-sub">{item.sub ?? item.intro}</p>
           <div class="sw-offer-price"><strong>{item.price}</strong></div>
           <div class="sw-offer-form-wrap">
-            <OfferBriefForm packageName={item.name} />
+            <OfferBriefForm packageName={item.name} tagline={representative ? item.tagline : undefined} />
           </div>
         </header>
       </div>
@@ -130,7 +140,7 @@ const extra = packageExtra[item.slug] ?? { problems: [], timeline: [], testimoni
   {/* Timeline / day-by-day */}
   {
     extra.timeline.length > 0 && (
-      <section class="sw-shell sw-section sw-timeline">
+      <section class:list={['sw-shell', 'sw-section', 'sw-timeline', representative && 'sw-timeline--representative']}>
         <div class="sw-section-heading">
           <h2>What you get, day by day</h2>
           {item.name === '20 Day SEO Boost' && (

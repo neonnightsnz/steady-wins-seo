@@ -1,8 +1,9 @@
 ---
 interface Props {
   packageName: string;
+  tagline?: string;
 }
-const { packageName } = Astro.props;
+const { packageName, tagline } = Astro.props;
 ---
 
 <form class="sw-offer-form" action="/contact" method="get" data-offer-brief>
@@ -17,4 +18,5 @@ const { packageName } = Astro.props;
   </label>
   <input type="hidden" name="package" value={packageName} />
   <button class="sw-button sw-offer-form-btn" type="submit">Get my starting point</button>
+  {tagline && <p class="sw-offer-form-tagline">{tagline}</p>}
 </form>
