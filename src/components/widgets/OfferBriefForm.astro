@@ -1,0 +1,29 @@
+---
+interface Props {
+  packageName: string;
+}
+const { packageName } = Astro.props;
+---
+
+<form class="sw-offer-form" action="/contact" method="get" data-offer-brief>
+  <p class="sw-offer-form-label"><span>Starting a brief for:</span> <strong>{packageName}</strong></p>
+  <label
+    >Your name
+    <input type="text" name="name" autocomplete="name" maxlength="120" required />
+  </label>
+  <label
+    >Website URL
+    <input
+      type="url"
+      name="website"
+      placeholder="https://yourwebsite.com"
+      autocomplete="off"
+      maxlength="500"
+      required
+    />
+  </label>
+  <input type="hidden" name="package" value={packageName} />
+  <button class="sw-button sw-offer-form-btn" type="submit"
+    >Start my growth brief <span aria-hidden="true">↗</span></button
+  >
+</form>
