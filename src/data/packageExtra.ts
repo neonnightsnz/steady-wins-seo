@@ -43,8 +43,8 @@ export const packageExtra: Record<string, PackageExtra> = {
       },
       {
         range: '02–09',
-        label: 'Anchor + target strategy',
-        body: 'Anchor text plan built around your actual target keywords — not generic phrases.',
+        label: 'Strategy and first placements',
+        body: 'We map your target keywords, plan the anchor text, and start placing links steadily.',
       },
       {
         range: '10',
@@ -53,8 +53,8 @@ export const packageExtra: Record<string, PackageExtra> = {
       },
       {
         range: '11–19',
-        label: '10–15 backlinks built',
-        body: 'High-authority links delivered across the window, drip-fed on purpose.',
+        label: 'Remaining links built',
+        body: 'We continue the campaign to deliver 10–15 backlinks across the 20-day window.',
       },
       {
         range: '20',

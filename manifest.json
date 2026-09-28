@@ -38,7 +38,7 @@
         "thumbnail": "content-that-ranks-v2.png",
         "text": "green-light-content-that-ranks-hit-green-to-go-up-text-only.png",
         "grid": "content-that-ranks-packages.png",
-        "title": null
+        "title": "content-that-ranks.png"
       }
     },
     {
@@ -58,7 +58,7 @@
         "thumbnail": "steady-plus-v2.png",
         "text": "straight-up-hard-hitting-guest-posts-that-push-the-needle-text-only.jpg",
         "grid": "steady-plus-packages.png",
-        "title": null
+        "title": "hard-hitting-guest-posts.png"
       }
     },
     {
@@ -78,7 +78,7 @@
         "thumbnail": "keywords-that-rank-v2.png",
         "text": "keywords-that-rank-v2.png",
         "grid": "keywords-that-rank-packages.jpg",
-        "title": null
+        "title": "keywords-that-rank.png"
       }
     },
     {
@@ -98,7 +98,7 @@
         "thumbnail": "links-all-month-v2.png",
         "text": "steady-on-new-links-all-month-flip-the-switch-text-only.jpg",
         "grid": "links-all-month-packages.png",
-        "title": null
+        "title": "new-links-all-month.png"
       }
     },
     {
@@ -118,7 +118,7 @@
         "thumbnail": "nitros-v2.png",
         "text": "steady-wins-nitrous-seo-addon-hit-the-nos-text-only.jpg",
         "grid": "nitros-packages.png",
-        "title": null
+        "title": "nitrous-seo-addon.png"
       }
     },
     {
@@ -138,7 +138,7 @@
         "thumbnail": "seo-perfect-storm-v2.png",
         "text": "steady-wins-seo-perfect-storm-hit-the-button.jpg",
         "grid": "seo-perfect-storm-packages.png",
-        "title": null
+        "title": "seo-perfect-storm.png"
       }
     },
     {
@@ -158,7 +158,7 @@
         "thumbnail": "quick-wins-v2.png",
         "text": "steady-wins-easy-seo-quick-wins-hit-the-button-text-only.jpg",
         "grid": "quick-wins-packages.png",
-        "title": null
+        "title": "easy-seo-quick-wins.png"
       }
     },
     {
@@ -178,7 +178,7 @@
         "thumbnail": "pbn-network-v2.png",
         "text": "the-pbn-network-whip-well-make-it-work-text-only.jpg",
         "grid": "pbn-network-packages.png",
-        "title": null
+        "title": "the-pbn-network-whip.png"
       }
     }
   ]

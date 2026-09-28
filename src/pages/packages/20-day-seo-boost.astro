@@ -1,0 +1,38 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import StructuredData from '~/components/common/StructuredData.astro';
+import TwentyDayBoostPage from '~/components/widgets/TwentyDayBoostPage.astro';
+import { twentyDayBoostFaqs } from '~/data/twentyDayBoostFaqs';
+import { SITE } from 'astrowind:config';
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: '20 Day SEO Boost',
+    serviceType: 'Link building campaign',
+    provider: { '@type': 'Organization', name: SITE.name },
+    description: 'A focused 20-day link building campaign with a site audit, 10–15 backlinks and a Day 20 report.',
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: twentyDayBoostFaqs.map(({ question, answer }) => ({
+      '@type': 'Question',
+      name: question,
+      acceptedAnswer: { '@type': 'Answer', text: answer },
+    })),
+  },
+];
+---
+
+<Layout
+  metadata={{
+    title: '20 Day SEO Boost',
+    description:
+      'A focused 20-day link campaign with a site audit, 10–15 backlinks and a Day 20 report. $499 one-time.',
+  }}
+>
+  <StructuredData slot="head" schema={schema} />
+  <TwentyDayBoostPage />
+</Layout>

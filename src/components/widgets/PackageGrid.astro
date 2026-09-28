@@ -6,6 +6,13 @@ interface Props {
 }
 const { compact = false } = Astro.props;
 const items = compact ? packages.slice(0, 3) : packages;
+const categoryIcons: Record<string, string> = {
+  Links: 'tabler:link',
+  "Core SEO": 'tabler:search',
+  Strategy: 'tabler:target',
+  Content: 'tabler:file-text',
+  "Add-on": 'tabler:plus',
+};
 ---
 
 <div class="sw-package-grid">
@@ -16,19 +23,17 @@ const items = compact ? packages.slice(0, 3) : packages;
         href={`/packages/${item.slug}`}
         style={`--package-accent:${item.color};--package-glow:${item.color}40;--package-index:${index}`}
         data-aw-glow
+        aria-label={item.name}
       >
         <div class="sw-package-top">
-          <>
-            <span class="sw-package-cat">{item.category}</span>
-            <span>{String(index + 1).padStart(2, '0')}</span>
-          </>
+          <span class="sw-package-icon-wrap" aria-hidden="true">
+            <Icon name={categoryIcons[item.category] ?? 'tabler:plus'} class="sw-package-icon" />
+          </span>
+          <span class="sw-package-cat">{item.category}</span>
         </div>
         <div class="sw-package-image-wrap">
-          <img class="sw-package-image" src={item.imagePackages} alt={item.imageAlt} loading="lazy" />
+          <img class="sw-package-image" src={item.imageTitle} alt={item.imageAlt} loading="lazy" />
         </div>
-        <Icon name={item.icon} class="sw-package-icon" />
-        <h3>{item.name}</h3>
-        <p class="sw-package-tagline">{item.tagline}</p>
         {item.price && <p class="sw-package-price">{item.price}</p>}
         <p class="sw-package-desc">{item.line}</p>
         <div class="sw-package-bottom">

@@ -390,7 +390,10 @@
   .sw-package-top {
     position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+    min-height: 36px;
     font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: 0.1em;
@@ -434,11 +437,21 @@
     width: 100%;
     height: auto;
   }
-  .sw-package-icon {
-    width: 44px;
-    height: 44px;
+  .sw-package-icon-wrap {
+    display: grid;
+    place-items: center;
+    flex: 0 0 36px;
+    width: 36px;
+    height: 36px;
+    margin: 0;
     color: var(--package-accent);
-    margin: 35px 0 22px;
+    border: 1px solid var(--package-accent);
+    border-radius: 10px;
+    background: var(--package-glow);
+  }
+  .sw-package-icon {
+    width: 24px;
+    height: 24px;
   }
   .sw-package h3 {
     font-size: 1.75rem;
@@ -922,12 +935,12 @@
   .sw-offer-hero--representative .sw-offer-hero-bg {
     position: absolute;
     top: 0;
-    right: -34%;
-    width: 150%;
+    right: 0;
+    width: 100%;
     max-width: none;
     height: 100%;
     object-fit: cover;
-    object-position: 86% center;
+    object-position: 100% center;
   }
   .sw-offer-hero--representative .sw-shell {
     position: relative;
@@ -1041,7 +1054,7 @@
       right: auto;
       order: 2;
       width: 100%;
-      height: 260px;
+      height: clamp(420px, 125vw, 560px);
       opacity: 1;
       -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 22%, black 84%, transparent 100%);
       mask-image: linear-gradient(to bottom, transparent 0%, black 22%, black 84%, transparent 100%);
@@ -1049,12 +1062,12 @@
     .sw-offer-hero--representative .sw-offer-hero-bg {
       position: absolute;
       top: 0;
-      right: -35%;
-      width: 160%;
+      right: 0;
+      width: auto;
       max-width: none;
       height: 100%;
-      object-fit: cover;
-      object-position: 88% center;
+      object-fit: contain;
+      object-position: 100% center;
     }
     .sw-offer-hero--representative .sw-offer-intro {
       max-width: none;

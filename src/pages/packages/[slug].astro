@@ -4,7 +4,9 @@ import { packages } from '~/data/packages';
 import { packageExtra } from '~/data/packageExtra';
 import OfferBriefForm from '~/components/widgets/OfferBriefForm.astro';
 export function getStaticPaths() {
-  return packages.map((item) => ({ params: { slug: item.slug }, props: { item } }));
+  return packages
+    .filter((item) => item.slug !== '20-day-seo-boost')
+    .map((item) => ({ params: { slug: item.slug }, props: { item } }));
 }
 interface Copy {
   problem?: string;
@@ -27,8 +29,9 @@ interface Item {
   sub?: string;
   price?: string;
   image?: string;
-  imageV2?: string;
-  imagePackages?: string;
+  imageThumbnail?: string;
+  imageHero?: string;
+
   imageAlt?: string;
   icon?: string;
   color?: string;
@@ -50,10 +53,22 @@ const representative = item.slug === '20-day-seo-boost';
       {
         representative ? (
           <div class="sw-offer-artwork">
-            <img class="sw-offer-hero-bg" src={item.imageV2} alt={item.imageAlt} loading="eager" fetchpriority="high" />
+            <img
+              class="sw-offer-hero-bg"
+              src={item.imageHero ?? item.imageThumbnail}
+              alt={item.imageAlt}
+              loading="eager"
+              fetchpriority="high"
+            />
           </div>
         ) : (
-          <img class="sw-offer-hero-bg" src={item.imageV2} alt={item.imageAlt} loading="eager" fetchpriority="high" />
+          <img
+            class="sw-offer-hero-bg"
+            src={item.imageHero ?? item.imageThumbnail}
+            alt={item.imageAlt}
+            loading="eager"
+            fetchpriority="high"
+          />
         )
       }
       <div class="sw-shell">
