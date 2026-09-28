@@ -1,0 +1,153 @@
+---
+import type { RecommendedPackage } from '~/data/packageRecommendations';
+
+interface Props {
+  item: RecommendedPackage;
+}
+
+const { item } = Astro.props;
+---
+
+<li class="recommendation-item">
+  <a class="recommendation-card" href={item.href} style={`--recommendation-accent: ${item.accent}`}>
+    <span class="recommendation-art" aria-hidden="true">
+      <span class="recommendation-art-mark"></span>
+      <span class="recommendation-art-label">Badge placeholder</span>
+    </span>
+    <span class="recommendation-copy">
+      <strong class="recommendation-name">{item.name}</strong>
+      <span class="recommendation-blurb">{item.blurb}</span>
+      {item.price && <span class="recommendation-price">{item.price}</span>}
+      <span class="recommendation-action">View package <span aria-hidden="true">→</span></span>
+    </span>
+  </a>
+</li>
+
+<style>
+  .recommendation-item {
+    min-width: 0;
+  }
+  .recommendation-card {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid var(--sw-border);
+    border-top: 3px solid var(--recommendation-accent);
+    border-radius: 18px;
+    background: color-mix(in srgb, var(--aw-color-bg-page) 92%, var(--aw-color-text-default) 8%);
+    color: var(--aw-color-text-default);
+    text-decoration: none;
+    transition: border-color 160ms ease, transform 160ms ease;
+  }
+  .recommendation-card:hover {
+    border-color: var(--recommendation-accent);
+    transform: translateY(-3px);
+  }
+  .recommendation-card:focus-visible {
+    outline: 3px solid var(--recommendation-accent);
+    outline-offset: 3px;
+  }
+  .recommendation-art {
+    position: relative;
+    display: flex;
+    height: 116px;
+    align-items: flex-end;
+    padding: 15px;
+    overflow: hidden;
+    background: color-mix(in srgb, var(--recommendation-accent) 17%, var(--aw-color-bg-page));
+  }
+  .recommendation-art::before,
+  .recommendation-art::after,
+  .recommendation-art-mark {
+    position: absolute;
+    display: block;
+    border: 2px solid var(--recommendation-accent);
+    border-radius: 50%;
+    content: '';
+  }
+  .recommendation-art::before {
+    top: -54px;
+    right: -25px;
+    width: 185px;
+    height: 185px;
+    opacity: 0.65;
+  }
+  .recommendation-art::after {
+    top: -22px;
+    right: 10px;
+    width: 115px;
+    height: 115px;
+    opacity: 0.45;
+  }
+  .recommendation-art-mark {
+    top: 14px;
+    right: 44px;
+    width: 50px;
+    height: 50px;
+    background: color-mix(in srgb, var(--recommendation-accent) 28%, transparent);
+  }
+  .recommendation-art-label {
+    position: relative;
+    z-index: 1;
+    padding: 5px 9px;
+    border: 1px solid var(--recommendation-accent);
+    border-radius: 8px;
+    background: var(--aw-color-bg-page);
+    color: var(--aw-color-text-default);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+  .recommendation-copy {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 9px;
+    padding: 20px;
+  }
+  .recommendation-name {
+    color: var(--aw-color-text-heading);
+    font-size: 1.16rem;
+    line-height: 1.25;
+  }
+  .recommendation-blurb {
+    color: var(--aw-color-text-muted);
+    font-size: 0.94rem;
+    line-height: 1.45;
+  }
+  .recommendation-price {
+    color: var(--aw-color-text-muted);
+    font-size: 0.82rem;
+    line-height: 1.4;
+  }
+  .recommendation-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: auto;
+    padding-top: 14px;
+    color: var(--aw-color-text-default);
+    font-size: 0.9rem;
+    font-weight: 750;
+  }
+  .recommendation-action > span {
+    display: grid;
+    width: 32px;
+    height: 32px;
+    place-items: center;
+    border-radius: 9px;
+    background: var(--recommendation-accent);
+    color: #06070a;
+    font-size: 1.12rem;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .recommendation-card {
+      transition: none;
+    }
+    .recommendation-card:hover {
+      transform: none;
+    }
+  }
+</style>
